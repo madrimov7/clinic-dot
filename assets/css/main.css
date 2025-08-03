@@ -1594,7 +1594,13 @@ input, select, textarea {
 
 	#banner-wrapper {
 		background: #c8d2bc url(images/bg1.png);
-		padding: 2em 0;
+		background-image: url(/images/opening_office.jpg);
+		background-size: cover;
+		background-position: center;
+	height: calc(100vh - 100px); /* 100px ~ header height */
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	#banner {
