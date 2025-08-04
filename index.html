@@ -20,8 +20,6 @@
 				padding: 20px;
 				max-width: 900px;
 				margin: 0 auto;
-				position: relative;
-				z-index: 10;
 			}
 			.card {
 				background: #fff;
@@ -115,7 +113,7 @@
 			}
 			.difference-item:hover .tooltip {
 				visibility: visible;
-				opacity: 1;
+				opacify: 1;
 			}
 			.highlighted:before {
 				color: #ff4500;
@@ -132,31 +130,20 @@
 			.difference-card:hover .difference-item:before {
 				animation: rotateHighlight 2s infinite linear;
 			}
-			.video-background {
-				position: absolute;
-				top: 0;
-				left: 0;
+			.video-section {
+				width: 100%;
+				margin: 20px auto;
+				text-align: center;
+			}
+			.video-section iframe {
 				width: 100%;
 				min-height: 500px;
-				z-index: 1;
-				overflow: hidden;
-			}
-			.video-background video {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-			.content-overlay {
-				position: relative;
-				z-index: 10;
+				border: 2px solid #008dab;
+				border-radius: 8px;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 			}
 			.row.main-row {
 				justify-content: center;
-				position: relative;
 			}
 		</style>
 	</head>
@@ -199,52 +186,47 @@
 				<div id="main">
 					<div class="container">
 						<div class="row main-row">
-							<div class="video-background">
-								<video autoplay loop muted playsinline>
-									<source src="https://drive.google.com/uc?export=download&id=1ncPpX3TbHbwz4gMhBaN4dh4siX-JCe9j" type="video/mp4">
-									Your browser does not support the video tag. Please update your browser or contact support.
-								</video>
-							</div>
-							<div class="content-overlay">
-								<div class="card-container">
-									<!-- Ish vaqti -->
-									<div class="card">
-										<h3>Ish vaqti</h3>
-										<p> Dushanba - Shanba 09:00 - 17:00 <br> Tushlik 13:00 - 14:00 <br> Yakshanba - Yopiq </p>
-									</div>
-
-									<!-- Xizmatlar -->
-									<div class="card">
-										<h3>Xizmatlar</h3>
-										<p>Malakali shifokorlarimiz tomonidan umumiy terapevtik tekshiruvlar, ultratovush diagnostikasi va boshqa davolash xizmatlari.</p>
-										<p><a href="twocolumn1.html">O'qish...</a></p>
-									</div>
-
-									<!-- Bog'lanish -->
-									<div class="card">
-										<h3>Bog'lanish</h3>
-										<p>Telefon: (+998) 90-579-0450<br>Email-pochta: madrimov.clinic@gmail.com<br>Manzil: 2-B, Sheroziy Ko'chasi, 220800, Xonqa, Xorazm Viloyati</p>
-										<p><a href="onecolumn.html">O'qish...</a></p>
-									</div>
-
-									<!-- Bizda nimalar farqli -->
-									<div class="difference-card">
-										<h3>Bizda nimalar farqli</h3>
-										<div class="difference-item">Sifat: Eng yuqori standartlarda davolash xizmatlari.
-											<span class="tooltip">Biz har bir bemorga eng sifatli va xavfsiz davolashni kafolatlaymiz.</span>
-										</div>
-										<div class="difference-item">E'tibor: Har bir bemorga shaxsiy yondashuv.
-											<span class="tooltip">Har bir bemorning ehtiyojlariga moslashtirilgan alohida e'tibor.</span>
-										</div>
-										<div class="difference-item">Ekslusivlik: Noyob va moslashtirilgan davolash rejalari.
-											<span class="tooltip">Unikal va shaxsiy davolash rejalarimiz bilan ajralib turamiz.</span>
-										</div>
-										<div class="difference-item">Tajriba: 15+ yillik malakali tajriba.
-											<span class="tooltip">O'n besh yildan ortiq tajriba bilan professional yordam.</span>
-										</div>
-										<div class="time-stamp" id="time-stamp">Soat: 00:13, 05.08.2025</div>
-									</div>
+							<div class="card-container">
+								<!-- Ish vaqti -->
+								<div class="card">
+									<h3>Ish vaqti</h3>
+									<p> Dushanba - Shanba 09:00 - 17:00 <br> Tushlik 13:00 - 14:00 <br> Yakshanba - Yopiq </p>
 								</div>
+
+								<!-- Xizmatlar -->
+								<div class="card">
+									<h3>Xizmatlar</h3>
+									<p>Malakali shifokorlarimiz tomonidan umumiy terapevtik tekshiruvlar, ultratovush diagnostikasi va boshqa davolash xizmatlari.</p>
+									<p><a href="twocolumn1.html">O'qish...</a></p>
+								</div>
+
+								<!-- Bog'lanish -->
+								<div class="card">
+									<h3>Bog'lanish</h3>
+									<p>Telefon: (+998) 90-579-0450<br>Email-pochta: madrimov.clinic@gmail.com<br>Manzil: 2-B, Sheroziy Ko'chasi, 220800, Xonqa, Xorazm Viloyati</p>
+									<p><a href="onecolumn.html">O'qish...</a></p>
+								</div>
+
+								<!-- Bizda nimalar farqli -->
+								<div class="difference-card">
+									<h3>Bizda nimalar farqli</h3>
+									<div class="difference-item">Sifat: Eng yuqori standartlarda davolash xizmatlari.
+										<span class="tooltip">Biz har bir bemorga eng sifatli va xavfsiz davolashni kafolatlaymiz.</span>
+									</div>
+									<div class="difference-item">E'tibor: Har bir bemorga shaxsiy yondashuv.
+										<span class="tooltip">Har bir bemorning ehtiyojlariga moslashtirilgan alohida e'tibor.</span>
+									</div>
+									<div class="difference-item">Ekslusivlik: Noyob va moslashtirilgan davolash rejalari.
+										<span class="tooltip">Unikal va shaxsiy davolash rejalarimiz bilan ajralib turamiz.</span>
+									</div>
+									<div class="difference-item">Tajriba: 15+ yillik malakali tajriba.
+										<span class="tooltip">O'n besh yildan ortiq tajriba bilan professional yordam.</span>
+									</div>
+									<div class="time-stamp" id="time-stamp">Soat: 00:25, 05.08.2025</div>
+								</div>
+							</div>
+							<div class="video-section">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/e3Ree9aSylk?si=NCDacLgjbctDoExF&autoplay=1&mute=1&loop=1&playlist=e3Ree9aSylk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
