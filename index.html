@@ -16,15 +16,17 @@
 				display: flex;
 				flex-wrap: wrap;
 				gap: 20px;
-				justify-content: center;
+				justify-content: center; /* Centers the cards horizontally */
 				padding: 20px;
+				max-width: 900px; /* Limits the total width to prevent excessive spread */
+				margin: 0 auto; /* Centers the container itself */
 			}
 			.card {
 				background: #fff;
 				border: 1px solid #e0e0e0;
 				border-radius: 8px;
 				padding: 20px;
-				width: 300px;
+				width: 280px; /* Slightly reduced width for better spacing */
 				text-align: center;
 				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 				transition: transform 0.2s;
@@ -49,6 +51,10 @@
 			}
 			.card a:hover {
 				text-decoration: underline;
+			}
+			/* Ensure the main-row doesn't interfere with centering */
+			.row.main-row {
+				justify-content: center;
 			}
 		</style>
 	</head>
@@ -244,7 +250,7 @@
 							<div class="col-12">
 
 								<div id="copyright">
-									&copy; 2025 Madrimov Clinic. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+									&copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
 								</div>
 
 							</div>
