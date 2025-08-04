@@ -16,17 +16,17 @@
 				display: flex;
 				flex-wrap: wrap;
 				gap: 20px;
-				justify-content: center; /* Centers the cards horizontally */
+				justify-content: center;
 				padding: 20px;
-				max-width: 900px; /* Limits the total width to prevent excessive spread */
-				margin: 0 auto; /* Centers the container itself */
+				max-width: 900px;
+				margin: 0 auto;
 			}
 			.card {
 				background: #fff;
 				border: 1px solid #e0e0e0;
 				border-radius: 8px;
 				padding: 20px;
-				width: 280px; /* Slightly reduced width for better spacing */
+				width: 280px;
 				text-align: center;
 				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 				transition: transform 0.2s;
@@ -52,7 +52,52 @@
 			.card a:hover {
 				text-decoration: underline;
 			}
-			/* Ensure the main-row doesn't interfere with centering */
+			/* New styles for "Bizda nimalar farqli" section */
+			.difference-card {
+				background: linear-gradient(135deg, #f0f8ff, #e6f3fa); /* Light blue gradient for uniqueness */
+				border: 2px solid #008dab;
+				padding: 25px;
+				width: 300px;
+				text-align: left;
+				position: relative;
+				overflow: hidden;
+			}
+			.difference-card h3 {
+				color: #008dab;
+				font-size: 1.8em;
+				margin-bottom: 15px;
+				text-transform: uppercase;
+			}
+			.difference-item {
+				margin-bottom: 15px;
+				padding-left: 30px;
+				position: relative;
+				font-size: 1.1em;
+				color: #004d71;
+			}
+			.difference-item:before {
+				content: "★";
+				position: absolute;
+				left: 0;
+				color: #008dab;
+				font-size: 1.2em;
+			}
+			.difference-card .time-stamp {
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+				color: #666;
+				font-size: 0.9em;
+				font-style: italic;
+			}
+			/* Animation for a creative touch */
+			@keyframes rotateHighlight {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
+			}
+			.difference-card:hover .difference-item:before {
+				animation: rotateHighlight 2s infinite linear;
+			}
 			.row.main-row {
 				justify-content: center;
 			}
@@ -116,6 +161,16 @@
 									<h3>Bog'lanish</h3>
 									<p>Telefon: (+998) 90-579-0450<br>Email-pochta: madrimov.clinic@gmail.com<br>Manzil: 2-B, Sheroziy Ko'chasi, 220800, Xonqa, Xorazm Viloyati</p>
 									<p><a href="onecolumn.html">O'qish...</a></p>
+								</div>
+
+								<!-- Bizda nimalar farqli -->
+								<div class="difference-card">
+									<h3>Bizda nimalar farqli</h3>
+									<div class="difference-item">Sifat: Eng yuqori standartlarda davolash xizmatlari.</div>
+									<div class="difference-item">E'tibor: Har bir bemorga shaxsiy yondashuv.</div>
+									<div class="difference-item">Ekslusivlik: Noyob va moslashtirilgan davolash rejalari.</div>
+									<div class="difference-item">Tajriba: 15+ yillik malakali tajriba.</div>
+									<div class="time-stamp">Soat: 23:13, 04.08.2025</div>
 								</div>
 							</div>
 							<div class="col-6 col-12-medium">
@@ -270,5 +325,3 @@
 
 	</body>
 </html>
-
-
