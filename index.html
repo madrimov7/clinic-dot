@@ -11,6 +11,46 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.card-container {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 20px;
+				justify-content: center;
+				padding: 20px;
+			}
+			.card {
+				background: #fff;
+				border: 1px solid #e0e0e0;
+				border-radius: 8px;
+				padding: 20px;
+				width: 300px;
+				text-align: center;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+				transition: transform 0.2s;
+			}
+			.card:hover {
+				transform: translateY(-5px);
+			}
+			.card h3 {
+				color: #008dab;
+				font-size: 1.5em;
+				margin-bottom: 10px;
+			}
+			.card p {
+				color: #666;
+				font-size: 1em;
+				line-height: 1.5;
+			}
+			.card a {
+				color: #008dab;
+				text-decoration: none;
+				font-weight: bold;
+			}
+			.card a:hover {
+				text-decoration: underline;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -51,64 +91,25 @@
 				<div id="main">
 					<div class="container">
 						<div class="row main-row">
-							<div class="col-4 col-12-medium">
+							<div class="card-container">
+								<!-- Opening Hours -->
+								<div class="card">
+									<h3>Opening Hours</h3>
+									<p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed</p>
+								</div>
 
-								<section>
-									<h2>Madrimov Klinikasi</h2>
-									<p>Bu zamonaviy xususiy klinika bo‘lib, biz sog‘liqni saqlash bo‘yicha yuqori sifatli xizmatlarni taqdim etamiz. Bizning malakali shifokorlarimiz umumiy terapevtik ko‘riklar, UZI diagnostika va boshqa davolash xizmatlarini taklif etadi. Sogliqingiz biz bilan ishonchli qollarda!.</p>
-									<footer class="controls">
-										<a href="http://html5up.net" class="button">Xizmatlar bilan tanishing ...</a>
-									</footer>
-								</section>
+								<!-- Services We Provide -->
+								<div class="card">
+									<h3>Services We Provide</h3>
+									<p>General therapeutic check-ups, Ultrasound diagnostics, and other treatment services by our qualified doctors.</p>
+									<p><a href="twocolumn1.html">Read More...</a></p>
+								</div>
 
-							</div>
-							<div class="col-4 col-6-medium col-12-small">
-
-								<section>
-									<h2>Bizning xodimlarimiz</h2>
-									<ul class="small-image-list">
-										<li>
-											<a href="#"><img src="images/martha-dominguez-de-gouveia-nMyM7fxpokE-unsplash.jpg" alt="" class="left" /></a>
-											<h4>Madrimov Alisher</h4>
-											<p>Fizioterapiya Vrachi</p>
-										</li>
-										<li>
-											<a href="#"><img src="images/pic1.jpg" alt="" class="left" /></a>
-											<h4>Yulduz Yuldasheva</h4>
-											<p>UZI diagnostikasi Varchi</p>
-										</li>
-									</ul>
-								</section>
-
-							</div>
-							<div class="col-4 col-6-medium col-12-small">
-
-								<section>
-									<h2>How about some links?</h2>
-									<div>
-										<div class="row">
-											<div class="col-6 col-12-small">
-												<ul class="link-list">
-													<li><a href="#">Sed neque nisi consequat</a></li>
-													<li><a href="#">Dapibus sed mattis blandit</a></li>
-													<li><a href="#">Quis accumsan lorem</a></li>
-													<li><a href="#">Suspendisse varius ipsum</a></li>
-													<li><a href="#">Eget et amet consequat</a></li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-small">
-												<ul class="link-list">
-													<li><a href="#">Quis accumsan lorem</a></li>
-													<li><a href="#">Sed neque nisi consequat</a></li>
-													<li><a href="#">Eget et amet consequat</a></li>
-													<li><a href="#">Dapibus sed mattis blandit</a></li>
-													<li><a href="#">Vitae magna sed dolore</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</section>
-
+								<!-- Contacts -->
+								<div class="card">
+									<h3>Contacts</h3>
+									<p>Phone: (+998) 90-123-4567<br>Email: info@madrimovclinic.site<br>Address: [Your Address]</p>
+								</div>
 							</div>
 							<div class="col-6 col-12-medium">
 
@@ -243,7 +244,7 @@
 							<div class="col-12">
 
 								<div id="copyright">
-									&copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+									&copy; 2025 Madrimov Clinic. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
 								</div>
 
 							</div>
@@ -262,5 +263,3 @@
 
 	</body>
 </html>
-
-
