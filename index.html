@@ -30,8 +30,8 @@
 				text-align: center;
 				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 				transition: transform 0.2s;
-				opacity: 0; /* Start hidden for animation */
-				animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+				opacity: 0;
+				animation: fadeIn 1s ease-in-out forwards;
 			}
 			.card:nth-child(1) { animation-delay: 0.2s; }
 			.card:nth-child(2) { animation-delay: 0.4s; }
@@ -58,7 +58,6 @@
 			.card a:hover {
 				text-decoration: underline;
 			}
-			/* New styles for "Bizda nimalar farqli" section */
 			.difference-card {
 				background: linear-gradient(135deg, #f0f8ff, #e6f3fa);
 				border: 2px solid #008dab;
@@ -80,7 +79,7 @@
 				position: relative;
 				font-size: 1.1em;
 				color: #004d71;
-				cursor: pointer; /* Indicate clickable area */
+				cursor: pointer;
 			}
 			.difference-item:before {
 				content: "★";
@@ -98,7 +97,6 @@
 				font-size: 0.9em;
 				font-style: italic;
 			}
-			/* Tooltip styles */
 			.tooltip {
 				position: absolute;
 				background: #fff;
@@ -117,23 +115,32 @@
 				visibility: visible;
 				opacity: 1;
 			}
-			/* Highlight effect on click */
 			.highlighted:before {
-				color: #ff4500; /* Orange highlight */
+				color: #ff4500;
 				transform: scale(1.2);
 			}
-			/* Animation for fade-in */
 			@keyframes fadeIn {
 				0% { opacity: 0; transform: translateY(20px); }
 				100% { opacity: 1; transform: translateY(0); }
 			}
-			/* Animation for rotating star on hover */
 			@keyframes rotateHighlight {
 				0% { transform: rotate(0deg); }
 				100% { transform: rotate(360deg); }
 			}
 			.difference-card:hover .difference-item:before {
 				animation: rotateHighlight 2s infinite linear;
+			}
+			.video-container {
+				max-width: 900px;
+				margin: 20px auto;
+				text-align: center;
+			}
+			video {
+				width: 100%;
+				max-height: 400px;
+				border: 2px solid #008dab;
+				border-radius: 8px;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 			}
 			.row.main-row {
 				justify-content: center;
@@ -215,8 +222,15 @@
 									<div class="difference-item">Tajriba: 15+ yillik malakali tajriba.
 										<span class="tooltip">O'n besh yildan ortiq tajriba bilan professional yordam.</span>
 									</div>
-									<div class="time-stamp" id="time-stamp">Soat: 23:19, 04.08.2025</div>
+									<div class="time-stamp" id="time-stamp">Soat: 23:54, 04.08.2025</div>
 								</div>
+							</div>
+							<!-- Video Section -->
+							<div class="video-container">
+								<video autoplay loop muted playsinline>
+									<source src="https://raw.githubusercontent.com/yourusername/madrimovclinic.site/main/videos/clinic_video.mp4" type="video/mp4">
+									Your browser does not support the video tag. Please update your browser or contact support.
+								</video>
 							</div>
 							<div class="col-6 col-12-medium">
 
@@ -377,7 +391,7 @@
 					document.getElementById('time-stamp').textContent = `Soat: ${timeString}, ${dateString}`;
 				}
 				setInterval(updateTime, 1000);
-				updateTime(); // Initial call
+				updateTime();
 
 				// Tooltip positioning
 				$('.difference-item').hover(function(e) {
@@ -391,7 +405,7 @@
 				// Click to highlight
 				$('.difference-item').on('click', function() {
 					$(this).toggleClass('highlighted');
-					$(this).siblings().removeClass('highlighted'); // Ensure only one is highlighted at a time
+					$(this).siblings().removeClass('highlighted');
 				});
 			</script>
 
