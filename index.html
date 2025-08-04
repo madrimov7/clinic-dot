@@ -30,7 +30,13 @@
 				text-align: center;
 				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 				transition: transform 0.2s;
+				opacity: 0; /* Start hidden for animation */
+				animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
 			}
+			.card:nth-child(1) { animation-delay: 0.2s; }
+			.card:nth-child(2) { animation-delay: 0.4s; }
+			.card:nth-child(3) { animation-delay: 0.6s; }
+			.card:nth-child(4) { animation-delay: 0.8s; }
 			.card:hover {
 				transform: translateY(-5px);
 			}
@@ -54,7 +60,7 @@
 			}
 			/* New styles for "Bizda nimalar farqli" section */
 			.difference-card {
-				background: linear-gradient(135deg, #f0f8ff, #e6f3fa); /* Light blue gradient for uniqueness */
+				background: linear-gradient(135deg, #f0f8ff, #e6f3fa);
 				border: 2px solid #008dab;
 				padding: 25px;
 				width: 300px;
@@ -74,6 +80,7 @@
 				position: relative;
 				font-size: 1.1em;
 				color: #004d71;
+				cursor: pointer; /* Indicate clickable area */
 			}
 			.difference-item:before {
 				content: "★";
@@ -81,6 +88,7 @@
 				left: 0;
 				color: #008dab;
 				font-size: 1.2em;
+				transition: transform 0.3s;
 			}
 			.difference-card .time-stamp {
 				position: absolute;
@@ -90,7 +98,36 @@
 				font-size: 0.9em;
 				font-style: italic;
 			}
-			/* Animation for a creative touch */
+			/* Tooltip styles */
+			.tooltip {
+				position: absolute;
+				background: #fff;
+				border: 1px solid #008dab;
+				padding: 10px;
+				border-radius: 5px;
+				color: #004d71;
+				font-size: 0.9em;
+				visibility: hidden;
+				opacity: 0;
+				transition: opacity 0.2s;
+				z-index: 1;
+				white-space: nowrap;
+			}
+			.difference-item:hover .tooltip {
+				visibility: visible;
+				opacity: 1;
+			}
+			/* Highlight effect on click */
+			.highlighted:before {
+				color: #ff4500; /* Orange highlight */
+				transform: scale(1.2);
+			}
+			/* Animation for fade-in */
+			@keyframes fadeIn {
+				0% { opacity: 0; transform: translateY(20px); }
+				100% { opacity: 1; transform: translateY(0); }
+			}
+			/* Animation for rotating star on hover */
 			@keyframes rotateHighlight {
 				0% { transform: rotate(0deg); }
 				100% { transform: rotate(360deg); }
@@ -166,11 +203,19 @@
 								<!-- Bizda nimalar farqli -->
 								<div class="difference-card">
 									<h3>Bizda nimalar farqli</h3>
-									<div class="difference-item">Sifat: Eng yuqori standartlarda davolash xizmatlari.</div>
-									<div class="difference-item">E'tibor: Har bir bemorga shaxsiy yondashuv.</div>
-									<div class="difference-item">Ekslusivlik: Noyob va moslashtirilgan davolash rejalari.</div>
-									<div class="difference-item">Tajriba: 15+ yillik malakali tajriba.</div>
-									<div class="time-stamp">Soat: 23:13, 04.08.2025</div>
+									<div class="difference-item">Sifat: Eng yuqori standartlarda davolash xizmatlari.
+										<span class="tooltip">Biz har bir bemorga eng sifatli va xavfsiz davolashni kafolatlaymiz.</span>
+									</div>
+									<div class="difference-item">E'tibor: Har bir bemorga shaxsiy yondashuv.
+										<span class="tooltip">Har bir bemorning ehtiyojlariga moslashtirilgan alohida e'tibor.</span>
+									</div>
+									<div class="difference-item">Ekslusivlik: Noyob va moslashtirilgan davolash rejalari.
+										<span class="tooltip">Unikal va shaxsiy davolash rejalarimiz bilan ajralib turamiz.</span>
+									</div>
+									<div class="difference-item">Tajriba: 15+ yillik malakali tajriba.
+										<span class="tooltip">O'n besh yildan ortiq tajriba bilan professional yordam.</span>
+									</div>
+									<div class="time-stamp" id="time-stamp">Soat: 23:19, 04.08.2025</div>
 								</div>
 							</div>
 							<div class="col-6 col-12-medium">
@@ -322,6 +367,33 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				// Real-time clock update
+				function updateTime() {
+					const now = new Date();
+					const options = { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Tashkent' };
+					const timeString = now.toLocaleTimeString('uz-UZ', options);
+					const dateString = now.toLocaleDateString('uz-UZ', { day: '2-digit', month: '2-digit', year: 'numeric' });
+					document.getElementById('time-stamp').textContent = `Soat: ${timeString}, ${dateString}`;
+				}
+				setInterval(updateTime, 1000);
+				updateTime(); // Initial call
+
+				// Tooltip positioning
+				$('.difference-item').hover(function(e) {
+					const tooltip = $(this).find('.tooltip');
+					tooltip.css({
+						top: e.pageY - $(this).offset().top - 50 + 'px',
+						left: e.pageX - $(this).offset().left + 20 + 'px'
+					});
+				});
+
+				// Click to highlight
+				$('.difference-item').on('click', function() {
+					$(this).toggleClass('highlighted');
+					$(this).siblings().removeClass('highlighted'); // Ensure only one is highlighted at a time
+				});
+			</script>
 
 	</body>
 </html>
