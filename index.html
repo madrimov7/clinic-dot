@@ -32,6 +32,9 @@
 				transition: transform 0.2s;
 				opacity: 0;
 				animation: fadeIn 1s ease-in-out forwards;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.1em;
+				line-height: 1.6;
 			}
 			.card:nth-child(1) { animation-delay: 0.2s; }
 			.card:nth-child(2) { animation-delay: 0.4s; }
@@ -41,82 +44,86 @@
 				transform: translateY(-5px);
 			}
 			.card h3 {
-				color: #008dab;
-				font-size: 1.5em;
-				margin-bottom: 10px;
+				color: #006d99;
+				font-size: 1.6em;
+				margin-bottom: 15px;
+				font-weight: 600;
 			}
 			.card p {
-				color: #666;
-				font-size: 1em;
-				line-height: 1.5;
+				color: #444;
+				font-size: 1.1em;
+				line-height: 1.7;
 			}
 			.card a {
-				color: #008dab;
+				color: #006d99;
 				text-decoration: none;
-				font-weight: bold;
+				font-weight: 500;
 			}
 			.card a:hover {
 				text-decoration: underline;
 			}
 			.difference-card {
 				background: linear-gradient(135deg, #f0f8ff, #e6f3fa);
-				border: 2px solid #008dab;
+				border: 2px solid #006d99;
 				padding: 25px;
 				width: 300px;
 				text-align: left;
 				position: relative;
 				overflow: hidden;
+				font-family: Arial, Helvetica, sans-serif;
 			}
 			.difference-card h3 {
-				color: #008dab;
-				font-size: 1.8em;
+				color: #006d99;
+				font-size: 1.9em;
 				margin-bottom: 15px;
 				text-transform: uppercase;
+				font-weight: 600;
 			}
 			.difference-item {
 				margin-bottom: 15px;
 				padding-left: 30px;
 				position: relative;
-				font-size: 1.1em;
-				color: #004d71;
+				font-size: 1.2em;
+				color: #00334d;
 				cursor: pointer;
 			}
 			.difference-item:before {
 				content: "★";
 				position: absolute;
 				left: 0;
-				color: #008dab;
-				font-size: 1.2em;
+				color: #006d99;
+				font-size: 1.3em;
 				transition: transform 0.3s;
 			}
 			.difference-card .time-stamp {
 				position: absolute;
 				bottom: 10px;
 				right: 10px;
-				color: #666;
-				font-size: 0.9em;
+				color: #555;
+				font-size: 1em;
 				font-style: italic;
 			}
 			.tooltip {
 				position: absolute;
 				background: #fff;
-				border: 1px solid #008dab;
-				padding: 10px;
-				border-radius: 5px;
-				color: #004d71;
-				font-size: 0.9em;
+				border: 1px solid #006d99;
+				padding: 12px;
+				border-radius: 6px;
+				color: #00334d;
+				font-size: 1em;
 				visibility: hidden;
 				opacity: 0;
 				transition: opacity 0.2s;
 				z-index: 1;
 				white-space: nowrap;
+				font-family: Arial, Helvetica, sans-serif;
 			}
 			.difference-item:hover .tooltip {
 				visibility: visible;
 				opacify: 1;
 			}
 			.highlighted:before {
-				color: #ff4500;
+				color: #cc3300;
 				transform: scale(1.2);
 			}
 			@keyframes fadeIn {
@@ -138,12 +145,47 @@
 			.video-section iframe {
 				width: 100%;
 				min-height: 500px;
-				border: 2px solid #008dab;
+				border: 2px solid #006d99;
 				border-radius: 8px;
 				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 			}
 			.row.main-row {
 				justify-content: center;
+			}
+			#banner {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.4em;
+				line-height: 1.5;
+				color: #00334d;
+			}
+			#banner h2 {
+				font-weight: 700;
+				margin-bottom: 10px;
+			}
+			#banner span {
+				font-weight: 400;
+			}
+			#copyright {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1em;
+				color: #555;
+			}
+			.link-list a {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.1em;
+				color: #006d99;
+			}
+			#copyright a {
+				color: #006d99;
+				font-weight: 500;
+			}
+			.blog-post h2, .blog-post h3 {
+				font-family: Arial, Helvetica, sans-serif;
+				color: #00334d;
+			}
+			.blog-post p {
+				font-family: Arial, Helvetica, sans-serif;
+				color: #444;
 			}
 		</style>
 	</head>
@@ -159,11 +201,11 @@
 								<header id="header">
 									<h1><a href="index.html" id="logo">Asosiy</a></h1>
 									<nav id="nav">
-										<a href="index.html" class="current-page-item">Bosh sahifa</a>
+										<a href="index.html" class="current-page-item">Bosh Sahifa</a>
 										<a href="twocolumn1.html">Xizmatlar</a>
 										<a href="twocolumn2.html">Yangiliklar</a>
 										<a href="onecolumn.html">Bog'lanish</a>
-										<a href="threecolumn.html">Bizning xodimlar</a>
+										<a href="threecolumn.html">Bizning Xodimlar</a>
 									</nav>
 								</header>
 
@@ -176,8 +218,8 @@
 				<div id="banner-wrapper">
 					<div class="container">
 						<div id="banner">
-							<h2>Soglikingiz biz uchun muhim!</h2>
-							<span>15+ yillik tajriba va 10+ mingdan ortiq davolangan bemorlar</span>
+							<h2>Sog'likingiz biz uchun muhim!</h2>
+							<span>15+ Yillik Tajriba Va 10+ Mingdan O'tiq Davolangan Bemorlar</span>
 						</div>
 					</div>
 				</div>
@@ -187,46 +229,46 @@
 					<div class="container">
 						<div class="row main-row">
 							<div class="card-container">
-								<!-- Ish vaqti -->
+								<!-- Ish Vaqti -->
 								<div class="card">
-									<h3>Ish vaqti</h3>
-									<p> Dushanba - Shanba 09:00 - 17:00 <br> Tushlik 13:00 - 14:00 <br> Yakshanba - Yopiq </p>
+									<h3>Ish Vaqti</h3>
+									<p>Dushanba - Shanba 09:00 - 17:00 <br>Tushlik 13:00 - 14:00 <br>Yakshanba - Yopiq</p>
 								</div>
 
 								<!-- Xizmatlar -->
 								<div class="card">
 									<h3>Xizmatlar</h3>
-									<p>Malakali shifokorlarimiz tomonidan umumiy terapevtik tekshiruvlar, ultratovush diagnostikasi va boshqa davolash xizmatlari.</p>
+									<p>Malakali Shifokorlarimiz Tomonidan Umumiy Terapevtik Tekshiruvlar, Ultratovush Diagnostikasi Va Boshqa Davolash Xizmatlari.</p>
 									<p><a href="twocolumn1.html">O'qish...</a></p>
 								</div>
 
 								<!-- Bog'lanish -->
 								<div class="card">
 									<h3>Bog'lanish</h3>
-									<p>Telefon: (+998) 90-579-0450<br>Email-pochta: madrimov.clinic@gmail.com<br>Manzil: 2-B, Sheroziy Ko'chasi, 220800, Xonqa, Xorazm Viloyati</p>
+									<p>Telefon: (+998) 90-579-0450<br>Email-Pochta: madrimov.clinic@gmail.com<br>Manzil: 2-B, Sheroziy Ko'chasi, 220800, Xonqa, Xorazm Viloyati</p>
 									<p><a href="onecolumn.html">O'qish...</a></p>
 								</div>
 
-								<!-- Bizda nimalar farqli -->
+								<!-- Bizda Nimalar Farqli -->
 								<div class="difference-card">
-									<h3>Bizda nimalar farqli</h3>
-									<div class="difference-item">Sifat: Eng yuqori standartlarda davolash xizmatlari.
-										<span class="tooltip">Biz har bir bemorga eng sifatli va xavfsiz davolashni kafolatlaymiz.</span>
+									<h3>Bizda Nimalar Farqli</h3>
+									<div class="difference-item">Sifat: Eng Yuqori Standartlarda Davolash Xizmatlari.
+										<span class="tooltip">Biz Har Bir Bemorga Eng Sifatli Va Xavfsiz Davolashni Kafolatlaymiz.</span>
 									</div>
-									<div class="difference-item">E'tibor: Har bir bemorga shaxsiy yondashuv.
-										<span class="tooltip">Har bir bemorning ehtiyojlariga moslashtirilgan alohida e'tibor.</span>
+									<div class="difference-item">E'tibor: Har Bir Bemorga Shaxsiy Yondashuv.
+										<span class="tooltip">Har Bir Bemorning Ehtiyojlariga Moslashtirilgan Alohida E'tibor.</span>
 									</div>
-									<div class="difference-item">Ekslusivlik: Noyob va moslashtirilgan davolash rejalari.
-										<span class="tooltip">Unikal va shaxsiy davolash rejalarimiz bilan ajralib turamiz.</span>
+									<div class="difference-item">Ekslusivlik: Noyob Va Moslashtirilgan Davolash Rejalari.
+										<span class="tooltip">Unikal Va Shaxsiy Davolash Rejalarimiz Bilan Ajralib Turamiz.</span>
 									</div>
-									<div class="difference-item">Tajriba: 15+ yillik malakali tajriba.
-										<span class="tooltip">O'n besh yildan ortiq tajriba bilan professional yordam.</span>
+									<div class="difference-item">Tajriba: 15+ Yillik Malakali Tajriba.
+										<span class="tooltip">O'n Besh Yildan O'tiq Tajriba Bilan Professional Yordam.</span>
 									</div>
-									<div class="time-stamp" id="time-stamp">Soat: 00:25, 05.08.2025</div>
+									<div class="time-stamp" id="time-stamp">Soat: 00:29, 05.08.2025</div>
 								</div>
 							</div>
 							<div class="video-section">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/e3Ree9aSylk?si=NCDacLgjbctDoExF&autoplay=1&mute=1&loop=1&playlist=e3Ree9aSylk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/e3Ree9aSylk?si=NCDacLgjbctDoExF&autoplay=1&mute=1&loop=1&playlist=e3Ree9aSylk" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
@@ -239,43 +281,43 @@
 							<div class="col-8 col-12-medium">
 
 								<section>
-									<h2>How about a truckload of links?</h2>
+									<h2>How About A Truckload Of Links?</h2>
 									<div>
 										<div class="row">
 											<div class="col-3 col-6-medium col-12-small">
 												<ul class="link-list">
-													<li><a href="#">Sed neque nisi consequat</a></li>
-													<li><a href="#">Dapibus sed mattis blandit</a></li>
-													<li><a href="#">Quis accumsan lorem</a></li>
-													<li><a href="#">Suspendisse varius ipsum</a></li>
-													<li><a href="#">Eget et amet consequat</a></li>
+													<li><a href="#">Sed Neque Nisi Consequat</a></li>
+													<li><a href="#">Dapibus Sed Mattis Blandit</a></li>
+													<li><a href="#">Quis Accumsan Lorem</a></li>
+													<li><a href="#">Suspendisse Varius Ipsum</a></li>
+													<li><a href="#">Eget Et Amet Consequat</a></li>
 												</ul>
 											</div>
 											<div class="col-3 col-6-medium col-12-small">
 												<ul class="link-list">
-													<li><a href="#">Quis accumsan lorem</a></li>
-													<li><a href="#">Sed neque nisi consequat</a></li>
-													<li><a href="#">Eget et amet consequat</a></li>
-													<li><a href="#">Dapibus sed mattis blandit</a></li>
-													<li><a href="#">Vitae magna sed dolore</a></li>
+													<li><a href="#">Quis Accumsan Lorem</a></li>
+													<li><a href="#">Sed Neque Nisi Consequat</a></li>
+													<li><a href="#">Eget Et Amet Consequat</a></li>
+													<li><a href="#">Dapibus Sed Mattis Blandit</a></li>
+													<li><a href="#">Vitae Magna Sed Dolore</a></li>
 												</ul>
 											</div>
 											<div class="col-3 col-6-medium col-12-small">
 												<ul class="link-list">
-													<li><a href="#">Sed neque nisi consequat</a></li>
-													<li><a href="#">Dapibus sed mattis blandit</a></li>
-													<li><a href="#">Quis accumsan lorem</a></li>
-													<li><a href="#">Suspendisse varius ipsum</a></li>
-													<li><a href="#">Eget et amet consequat</a></li>
+													<li><a href="#">Sed Neque Nisi Consequat</a></li>
+													<li><a href="#">Dapibus Sed Mattis Blandit</a></li>
+													<li><a href="#">Quis Accumsan Lorem</a></li>
+													<li><a href="#">Suspendisse Varius Ipsum</a></li>
+													<li><a href="#">Eget Et Amet Consequat</a></li>
 												</ul>
 											</div>
 											<div class="col-3 col-6-medium col-12-small">
 												<ul class="link-list">
-													<li><a href="#">Quis accumsan lorem</a></li>
-													<li><a href="#">Sed neque nisi consequat</a></li>
-													<li><a href="#">Eget et amet consequat</a></li>
-													<li><a href="#">Dapibus sed mattis blandit</a></li>
-													<li><a href="#">Vitae magna sed dolore</a></li>
+													<li><a href="#">Quis Accumsan Lorem</a></li>
+													<li><a href="#">Sed Neque Nisi Consequat</a></li>
+													<li><a href="#">Eget Et Amet Consequat</a></li>
+													<li><a href="#">Dapibus Sed Mattis Blandit</a></li>
+													<li><a href="#">Vitae Magna Sed Dolore</a></li>
 												</ul>
 											</div>
 										</div>
@@ -286,13 +328,13 @@
 							<div class="col-4 col-12-medium">
 
 								<section>
-									<h2>Something of interest</h2>
-									<p>Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed.
-									Suspendisse eu varius nibh. Suspendisse vitae magna eget odio amet
-									mollis justo facilisis quis. Sed sagittis mauris amet tellus gravida
-									lorem ipsum dolor sit blandit.</p>
+									<h2>Something Of Interest</h2>
+									<p>Duis Neque Nisi, Dapibus Sed Mattis Quis, Rutrum Accumsan Sed.
+									Suspendisse Eu Varius Nibh. Suspendisse Vitae Magna Eget Odio Amet
+									Mollis Justo Facilisis Quis. Sed Sagittis Mauris Amet Tellus Gravida
+									Lorem Ipsum Dolor Sit Blandit.</p>
 									<footer class="controls">
-										<a href="#" class="button">Oh, please continue ....</a>
+										<a href="#" class="button">Oh, Please Continue ....</a>
 									</footer>
 								</section>
 
@@ -302,7 +344,7 @@
 							<div class="col-12">
 
 								<div id="copyright">
-									&copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+									&copy; Untitled. All Rights Reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
 								</div>
 
 							</div>
