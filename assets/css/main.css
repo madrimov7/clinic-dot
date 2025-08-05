@@ -2007,6 +2007,9 @@ input, select, textarea {
 			#footer-wrapper {
 				padding: 40px 0;
 			}
+		#header nav a {
+    text-transform: capitalize !important;
+}
 
 		/* Copyright */
 
