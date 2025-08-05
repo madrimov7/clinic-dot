@@ -1,148 +1,348 @@
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Madrimov Klinikasi</title>
-    <link rel="icon" type="image/png" href="MC_logo_imresizer.png" />
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f9ff;
-            color: #003366;
-        }
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="icon" type="image/png" href="images/MC_logo_imresizer.png">
+		<title>Madrimov Clinic</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.card-container {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 20px;
+				justify-content: center;
+				padding: 20px;
+				max-width: 900px;
+				margin: 0 auto;
+			}
+			.card {
+				background: #fff;
+				border: 1px solid #e0e0e0;
+				border-radius: 8px;
+				padding: 20px;
+				width: 280px;
+				text-align: center;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+				transition: transform 0.2s;
+				opacity: 0;
+				animation: fadeIn 1s ease-in-out forwards;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.1em;
+				line-height: 1.6;
+			}
+			.card:nth-child(1) { animation-delay: 0.2s; }
+			.card:nth-child(2) { animation-delay: 0.4s; }
+			.card:nth-child(3) { animation-delay: 0.6s; }
+			.card:nth-child(4) { animation-delay: 0.8s; }
+			.card:hover {
+				transform: translateY(-5px);
+			}
+			.card h3 {
+				color: #006d99;
+				font-size: 1.6em;
+				margin-bottom: 15px;
+				font-weight: 600;
+			}
+			.card p {
+				color: #444;
+				font-size: 1.1em;
+				line-height: 1.7;
+			}
+			.card a {
+				color: #006d99;
+				text-decoration: none;
+				font-weight: 500;
+			}
+			.card a:hover {
+				text-decoration: underline;
+			}
+			.difference-card {
+				background: linear-gradient(135deg, #f0f8ff, #e6f3fa);
+				border: 2px solid #006d99;
+				padding: 25px;
+				width: 300px;
+				text-align: left;
+				position: relative;
+				overflow: hidden;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			.difference-card h3 {
+				color: #006d99;
+				font-size: 1.9em;
+				margin-bottom: 15px;
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+			.difference-item {
+				margin-bottom: 15px;
+				padding-left: 30px;
+				position: relative;
+				font-size: 1.2em;
+				color: #00334d;
+				cursor: pointer;
+			}
+			.difference-item:before {
+				content: "★";
+				position: absolute;
+				left: 0;
+				color: #006d99;
+				font-size: 1.3em;
+				transition: transform 0.3s;
+			}
+			.difference-card .time-stamp {
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+				color: #555;
+				font-size: 1em;
+				font-style: italic;
+			}
+			.tooltip {
+				position: absolute;
+				background: #fff;
+				border: 1px solid #006d99;
+				padding: 12px;
+				border-radius: 6px;
+				color: #00334d;
+				font-size: 1em;
+				visibility: hidden;
+				opacity: 0;
+				transition: opacity 0.2s;
+				z-index: 1;
+				white-space: nowrap;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			.difference-item:hover .tooltip {
+				visibility: visible;
+				opacify: 1;
+			}
+			.highlighted:before {
+				color: #cc3300;
+				transform: scale(1.2);
+			}
+			@keyframes fadeIn {
+				0% { opacity: 0; transform: translateY(20px); }
+				100% { opacity: 1; transform: translateY(0); }
+			}
+			@keyframes rotateHighlight {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
+			}
+			.difference-card:hover .difference-item:before {
+				animation: rotateHighlight 2s infinite linear;
+			}
+			.video-section {
+				width: 100%;
+				margin: 20px auto;
+				text-align: center;
+			}
+			.video-section iframe {
+				width: 100%;
+				min-height: 500px;
+				border: 2px solid #006d99;
+				border-radius: 8px;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			}
+			.row.main-row {
+				justify-content: center;
+			}
+			#banner {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 0.8em; /* Significantly reduced from 1.4em */
+				line-height: 1.3;
+				color: #00334d;
+				text-align: center;
+			}
+			#banner h2 {
+				font-weight: 700;
+				margin-bottom: 5px;
+			}
+			#banner span {
+				font-weight: 400;
+			}
+			#copyright {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1em;
+				color: #555;
+			}
+			.link-list a {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.1em;
+				color: #006d99;
+			}
+			#copyright a {
+				color: #006d99;
+				font-weight: 500;
+			}
+			.blog-post h2, .blog-post h3 {
+				font-family: Arial, Helvetica, sans-serif;
+				color: #00334d;
+			}
+			.blog-post p {
+				font-family: Arial, Helvetica, sans-serif;
+				color: #444;
+			}
+			.map-section {
+				margin: 20px 0;
+				text-align: center;
+			}
+			.map-section iframe {
+				width: 100%;
+				height: 400px;
+				border: 2px solid #006d99;
+				border-radius: 8px;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="page-wrapper">
 
-        header {
-            background-color: #003366;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
 
-        header img {
-            height: 60px;
-        }
+								<header id="header">
+									<h1><a href="index.html" id="logo">Asosiy</a></h1>
+									<nav id="nav">
+										<a href="index.html" class="current-page-item">Bosh Sahifa</a>
+										<a href="twocolumn1.html">Xizmatlar</a>
+										<a href="twocolumn2.html">Yangiliklar</a>
+										<a href="onecolumn.html">Bog'lanish</a>
+										<a href="threecolumn.html">Bizning Xodimlar</a>
+									</nav>
+								</header>
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-        }
+							</div>
+						</div>
+					</div>
+				</div>
 
-        .hero {
-            background-color: #e6f0ff;
-            padding: 60px 20px;
-            text-align: center;
-        }
+			<!-- Banner -->
+				<div id="banner-wrapper">
+					<div class="container">
+						<div id="banner">
+							<h2>Sog'likingiz Biz Uchun Muhim!</h2>
+							<span>15+ Yillik Tajriba Va 10+ Mingdan O'tiq Davolangan Bemorlar</span>
+						</div>
+					</div>
+				</div>
 
-        .hero h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
+			<!-- Main -->
+				<div id="main">
+					<div class="container">
+						<div class="row main-row">
+							<div class="card-container">
+								<!-- Ish Vaqti -->
+								<div class="card">
+									<h3>Ish Vaqti</h3>
+									<p>Dushanba - Shanba 09:00 - 17:00 <br>Tushlik 13:00 - 14:00 <br>Yakshanba - Yopiq</p>
+								</div>
 
-        .hero p {
-            font-size: 18px;
-        }
+								<!-- Xizmatlar -->
+								<div class="card">
+									<h3>Xizmatlar</h3>
+									<p>Malakali Shifokorlarimiz Tomonidan Umumiy Terapevtik Tekshiruvlar, Ultratovush Diagnostikasi Va Boshqa Davolash Xizmatlari.</p>
+									<p><a href="twocolumn1.html">O'qish...</a></p>
+								</div>
 
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 40px 20px;
-            background-color: #ffffff;
-        }
+								<!-- Bog'lanish -->
+								<div class="card">
+									<h3>Bog'lanish</h3>
+									<p>Telefon: (+998) 90-579-0450<br>Email-Pochta: madrimov.clinic@gmail.com<br>Manzil: 2-B, Sheroziy Ko'chasi, 220800, Xonqa, Xorazm Viloyati</p>
+									<p><a href="onecolumn.html">O'qish...</a></p>
+								</div>
 
-        .service {
-            background-color: #e6f0ff;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px;
-            width: 250px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-        }
+								<!-- Bizda Nimalar Farqli -->
+								<div class="difference-card">
+									<h3>Bizda Nimalar Farqli</h3>
+									<div class="difference-item">Sifat: Eng Yuqori Standartlarda Davolash Xizmatlari.
+										<span class="tooltip">Biz Har Bir Bemorga Eng Sifatli Va Xavfsiz Davolashni Kafolatlaymiz.</span>
+									</div>
+									<div class="difference-item">E'tibor: Har Bir Bemorga Shaxsiy Yondashuv.
+										<span class="tooltip">Har Bir Bemorning Ehtiyojlariga Moslashtirilgan Alohida E'tibor.</span>
+									</div>
+									<div class="difference-item">Ekslusivlik: Noyob Va Moslashtirilgan Davolash Rejalari.
+										<span class="tooltip">Unikal Va Shaxsiy Davolash Rejalarimiz Bilan Ajralib Turamiz.</span>
+									</div>
+									<div class="difference-item">Tajriba: 15+ Yillik Malakali Tajriba.
+										<span class="tooltip">O'n Besh Yildan O'tiq Tajriba Bilan Professional Yordam.</span>
+									</div>
+									<div class="time-stamp" id="time-stamp">Soat: 00:56, 05.08.2025</div>
+								</div>
+							</div>
+							<div class="video-section">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/e3Ree9aSylk?si=NCDacLgjbctDoExF&autoplay=1&mute=1&loop=1&playlist=e3Ree9aSylk" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
 
-        .team {
-            text-align: center;
-            padding: 40px 20px;
-        }
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-12-medium">
 
-        .team img {
-            width: 300px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
+								<section>
+									<h2>Qoshimcha Havolalar</h2>
+									<div class="map-section">
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.1234567890123!2d60.774353!3d41.477179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDigjEzJzE4LjAiTiA2MMKwNDYnMjYuNCJF!5e0!3m2!1sen!2suz!4v1691200000!5m2!1sen!2suz" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+									</div>
+								</section>
 
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
 
-        @media (max-width: 600px) {
-            .services {
-                flex-direction: column;
-                align-items: center;
-            }
+								<div id="copyright">
+									&copy; Madrimov Clinic | Barcha Huquqlar Himoyalangan
+								</div>
 
-            .service {
-                width: 90%;
-            }
+							</div>
+						</div>
+					</div>
+				</div>
 
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+		</div>
 
-            nav {
-                margin-top: 10px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <img src="MC_logo_imresizer.png" alt="Madrimov Klinika Logosi" />
-        <nav>
-            <a href="#xizmatlar">Xizmatlar</a>
-            <a href="#jamoa">Jamoamiz</a>
-            <a href="#aloqa">Aloqa</a>
-        </nav>
-    </header>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				// Real-time clock update
+				function updateTime() {
+					const now = new Date();
+					const options = { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Tashkent' };
+					const timeString = now.toLocaleTimeString('uz-UZ', options);
+					const dateString = now.toLocaleDateString('uz-UZ', { day: '2-digit', month: '2-digit', year: 'numeric' });
+					document.getElementById('time-stamp').textContent = `Soat: ${timeString}, ${dateString}`;
+				}
+				setInterval(updateTime, 1000);
+				updateTime();
 
-    <section class="hero">
-        <h1>Madrimov Klinikasi</h1>
-        <p>Sifatli UZI va Fizioterapiya xizmatlari</p>
-    </section>
+				// Tooltip positioning
+				$('.difference-item').hover(function(e) {
+					const tooltip = $(this).find('.tooltip');
+					tooltip.css({
+						top: e.pageY - $(this).offset().top - 50 + 'px',
+						left: e.pageX - $(this).offset().left + 20 + 'px'
+					});
+				});
 
-    <section class="services" id="xizmatlar">
-        <div class="service">
-            <h3>UZI Diagnostikasi</h3>
-            <p>Zamonaviy uskunalarda yuqori aniqlikdagi ultratovush tekshiruvlar</p>
-        </div>
-        <div class="service">
-            <h3>Fizioterapiya</h3>
-            <p>Orqa, bo'yin og'riqlari va boshqa muammolarga zamonaviy davolash usullari</p>
-        </div>
-    </section>
+				// Click to highlight
+				$('.difference-item').on('click', function() {
+					$(this).toggleClass('highlighted');
+					$(this).siblings().removeClass('highlighted');
+				});
+			</script>
 
-    <section class="team" id="jamoa">
-        <h2>Bizning Jamoa</h2>
-        <p>Tajribali va mehribon mutaxassislar sizga xizmat ko‘rsatadi</p>
-        <img src="team_photo.jpg" alt="Bizning jamoamiz rasmi" />
-    </section>
-
-    <footer id="aloqa">
-        <p>📍 Manzil: Toshkent, Yunusobod tumani, 12-mavze</p>
-        <p>📞 Telefon: +998 90 123 45 67</p>
-        <p>📧 Email: madrimovclinic@gmail.com</p>
-        <p>&copy; 2025 Madrimov Klinikasi</p>
-    </footer>
-</body>
+	</body>
 </html>
