@@ -27,6 +27,18 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
+@media (max-width: 768px) {
+    .card, .difference-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .map-section {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+}
 
 ol, ul {
     list-style: none;
