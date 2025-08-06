@@ -198,6 +198,46 @@
 				border: none;
 				border-radius: 8px;
 			}
+			.testimonial-section {
+				margin: 20px 0;
+				padding: 20px;
+				background: #f9f9f9;
+				border: 1px solid #e0e0e0;
+				border-radius: 8px;
+				overflow: hidden;
+			}
+			.testimonial-marquee {
+				display: flex;
+				gap: 40px;
+				animation: scroll 20s linear infinite;
+				white-space: nowrap;
+			}
+			.testimonial-item {
+				display: flex;
+				align-items: center;
+				gap: 15px;
+				padding: 10px;
+				min-width: 300px;
+			}
+			.testimonial-item img {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+			.testimonial-text {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1em;
+				color: #333;
+			}
+			.testimonial-name {
+				font-weight: 600;
+				color: #006d99;
+			}
+			@keyframes scroll {
+				0% { transform: translateX(100%); }
+				100% { transform: translateX(-100%); }
+			}
 		</style>
 	</head>
 	<body>
@@ -273,7 +313,44 @@
 									<div class="difference-item">Tajriba: 15+ Yillik Malakali Tajriba.
 										<span class="tooltip">O'n Besh Yildan O'tiq Tajriba Bilan Professional Yordam.</span>
 									</div>
-									<div class="time-stamp" id="time-stamp">Soat: 18:24, 06.08.2025</div>
+									<div class="time-stamp" id="time-stamp">Soat: 19:01, 06.08.2025</div>
+								</div>
+							</div>
+							<div class="testimonial-section">
+								<div class="testimonial-marquee">
+									<div class="testimonial-item">
+										<img src="images/photoL4.jpg" alt="Angela Merkel">
+										<div class="testimonial-text">"Ultratovush diagnostikasi uchun ushbu klinikaga bordim va xodimlarning professionalligi hamda muloyimligi meni hayratda qoldirdi. Shifokor hammasini aniq tushuntirib berdi va o‘zimni xotirjam his qildim. Natijalar aniqligi bilan ajralib turdi va tezda yetkazildi. Ishonchli diagnostika kerak bo‘lsa, albatta tavsiya qilaman!" <span class="testimonial-name">Angela Merkel</span></div>
+									</div>
+									<div class="testimonial-item">
+										<img src="images/photoL2.jpg" alt="Cristiano Ronaldo">
+										<div class="testimonial-text">"Sport jarohatidan so‘ng bu yerda fizioterapiyani boshladim va natijalar juda yaxshi bo‘ldi. Fizioterapevtlar bilimli va sizning sog‘ayishingizga chin dildan qiziqishadi. Har bir seans tartibli va samarali o‘tadi. Qayta oyoqqa turishimda yordam berganingiz uchun katta rahmat!" <span class="testimonial-name">Cristiano Ronaldo</span></div>
+									</div>
+									<div class="testimonial-item">
+										<img src="images/photoL3.jpg" alt="Irina Shayk">
+										<div class="testimonial-text">"Boshidan oxirigacha ajoyib tajriba bo‘ldi! Ultratovush uskunalari zamonaviy, xizmat ko‘rsatish esa juda tezkor edi. Keyinchalik fizioterapiya ham oldim va belimdagi og‘riq deyarli butunlay yo‘qoldi. Juda tavsiya qilaman!" <span class="testimonial-name">Irina Shayk</span></div>
+									</div>
+									<div class="testimonial-item">
+										<img src="images/photoL1.jpg" alt="Albert Einstein">
+										<div class="testimonial-text">"Ajoyib klinika! Onamni bu yerga ultratovush va keyinchalik fizioterapiya muolajalari uchun olib keldim. Shifokorlar nihoyatda sabrli va samimiy bo‘lishdi, ko‘rsatilgan yordam darajasi esa juda yuqori edi. Natijadan ikkalamiz ham juda mamnunmiz." <span class="testimonial-name">Albert Einstein</span></div>
+									</div>
+									<!-- Duplicate items to ensure continuous scrolling -->
+									<div class="testimonial-item">
+										<img src="images/photoL4.jpg" alt="Angela Merkel">
+										<div class="testimonial-text">"Ultratovush diagnostikasi uchun ushbu klinikaga bordim va xodimlarning professionalligi hamda muloyimligi meni hayratda qoldirdi. Shifokor hammasini aniq tushuntirib berdi va o‘zimni xotirjam his qildim. Natijalar aniqligi bilan ajralib turdi va tezda yetkazildi. Ishonchli diagnostika kerak bo‘lsa, albatta tavsiya qilaman!" <span class="testimonial-name">Angela Merkel</span></div>
+									</div>
+									<div class="testimonial-item">
+										<img src="images/photoL2.jpg" alt="Cristiano Ronaldo">
+										<div class="testimonial-text">"Sport jarohatidan so‘ng bu yerda fizioterapiyani boshladim va natijalar juda yaxshi bo‘ldi. Fizioterapevtlar bilimli va sizning sog‘ayishingizga chin dildan qiziqishadi. Har bir seans tartibli va samarali o‘tadi. Qayta oyoqqa turishimda yordam berganingiz uchun katta rahmat!" <span class="testimonial-name">Cristiano Ronaldo</span></div>
+									</div>
+									<div class="testimonial-item">
+										<img src="images/photoL3.jpg" alt="Irina Shayk">
+										<div class="testimonial-text">"Boshidan oxirigacha ajoyib tajriba bo‘ldi! Ultratovush uskunalari zamonaviy, xizmat ko‘rsatish esa juda tezkor edi. Keyinchalik fizioterapiya ham oldim va belimdagi og‘riq deyarli butunlay yo‘qoldi. Juda tavsiya qilaman!" <span class="testimonial-name">Irina Shayk</span></div>
+									</div>
+									<div class="testimonial-item">
+										<img src="images/photoL1.jpg" alt="Albert Einstein">
+										<div class="testimonial-text">"Ajoyib klinika! Onamni bu yerga ultratovush va keyinchalik fizioterapiya muolajalari uchun olib keldim. Shifokorlar nihoyatda sabrli va samimiy bo‘lishdi, ko‘rsatilgan yordam darajasi esa juda yuqori edi. Natijadan ikkalamiz ham juda mamnunmiz." <span class="testimonial-name">Albert Einstein</span></div>
+									</div>
 								</div>
 							</div>
 							<div class="video-section">
