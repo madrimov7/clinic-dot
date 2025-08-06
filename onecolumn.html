@@ -194,13 +194,84 @@
 				border-radius: 8px;
 				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 			}
+			.contact-info {
+				background: #f0f8ff;
+				padding: 20px;
+				border: 2px solid #006d99;
+				border-radius: 8px;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			.contact-item {
+				margin-bottom: 15px;
+				font-size: 1.1em;
+				color: #00334d;
+			}
+			.contact-item i {
+				margin-right: 10px;
+				color: #006d99;
+			}
+			.contact-item a {
+				color: #006d99;
+				text-decoration: none;
+				font-weight: 500;
+			}
+			.contact-item a:hover {
+				text-decoration: underline;
+			}
+			.decorative-line {
+				border: 0;
+				height: 1px;
+				background: #006d99;
+				margin: 10px 0;
+			}
+			.contact-form {
+				max-width: 600px;
+				margin: 0 auto 20px;
+				padding: 20px;
+				background: #f9f9f9;
+				border: 2px solid #006d99;
+				border-radius: 8px;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			.contact-form h3 {
+				color: #006d99;
+				font-size: 1.6em;
+				margin-bottom: 15px;
+				text-align: center;
+			}
+			.contact-form label {
+				display: block;
+				margin-bottom: 5px;
+				font-weight: 600;
+				color: #00334d;
+			}
+			.contact-form input,
+			.contact-form textarea {
+				width: 100%;
+				padding: 10px;
+				margin-bottom: 15px;
+				border: 1px solid #e0e0e0;
+				border-radius: 4px;
+				font-size: 1em;
+				box-sizing: border-box;
+			}
+			.contact-form button {
+				background: #006d99;
+				color: #fff;
+				padding: 10px 20px;
+				border: none;
+				border-radius: 4px;
+				font-size: 1.1em;
+				cursor: pointer;
+				width: 100%;
+			}
+			.contact-form button:hover {
+				background: #004d70;
+			}
 		</style>
-	</head>
-	<head>
-		<title>Bog'lanish</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -210,7 +281,6 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-12">
-
 								<header id="header">
 									<h1><a href="index.html" id="logo">Asosiy</a></h1>
 									<nav id="nav">
@@ -221,7 +291,6 @@
 										<a href="threecolumn.html">Bizning xodimlar</a>
 									</nav>
 								</header>
-
 							</div>
 						</div>
 					</div>
@@ -232,11 +301,21 @@
 					<div class="container">
 						<div class="row main-row">
 							<div class="col-12">
-
-								<section>
-									<h2>Biz bilan bog'laning</h2>
+								<section class="contact-form">
+									<h3>Bizga Xabar Yuboring</h3>
+									<form action="https://formsubmit.co/madrimov.clinic@gmail.com" method="POST">
+										<input type="hidden" name="_subject" value="New Contact Form Submission">
+										<input type="hidden" name="_next" value="https://your-thank-you-page.com">
+										<input type="hidden" name="_captcha" value="false">
+										<label for="name">Ismingiz:</label>
+										<input type="text" id="name" name="name" placeholder="Ismingizni kiriting" required>
+										<label for="email">Email:</label>
+										<input type="email" id="email" name="email" placeholder="Email manzilingiz" required>
+										<label for="message">Xabaringiz:</label>
+										<textarea id="message" name="message" rows="5" placeholder="Xabaringizni yozing" required></textarea>
+										<button type="submit">Yuborish</button>
+									</form>
 								</section>
-
 							</div>
 						</div>
 					</div>
@@ -246,75 +325,28 @@
 				<div id="footer-wrapper">
 					<div class="container">
 						<div class="row">
-							<div class="col-8 col-12-medium">
-
+							<div class="col-12">
 								<section>
-									<h2>How about a truckload of links?</h2>
-									<div>
-										<div class="row">
-											<div class="col-3 col-6-medium col-12-small">
-												<ul class="link-list">
-													<li><a href="#">Sed neque nisi consequat</a></li>
-													<li><a href="#">Dapibus sed mattis blandit</a></li>
-													<li><a href="#">Quis accumsan lorem</a></li>
-													<li><a href="#">Suspendisse varius ipsum</a></li>
-													<li><a href="#">Eget et amet consequat</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-small">
-												<ul class="link-list">
-													<li><a href="#">Quis accumsan lorem</a></li>
-													<li><a href="#">Sed neque nisi consequat</a></li>
-													<li><a href="#">Eget et amet consequat</a></li>
-													<li><a href="#">Dapibus sed mattis blandit</a></li>
-													<li><a href="#">Vitae magna sed dolore</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-small">
-												<ul class="link-list">
-													<li><a href="#">Sed neque nisi consequat</a></li>
-													<li><a href="#">Dapibus sed mattis blandit</a></li>
-													<li><a href="#">Quis accumsan lorem</a></li>
-													<li><a href="#">Suspendisse varius ipsum</a></li>
-													<li><a href="#">Eget et amet consequat</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-small">
-												<ul class="link-list">
-													<li><a href="#">Quis accumsan lorem</a></li>
-													<li><a href="#">Sed neque nisi consequat</a></li>
-													<li><a href="#">Eget et amet consequat</a></li>
-													<li><a href="#">Dapibus sed mattis blandit</a></li>
-													<li><a href="#">Vitae magna sed dolore</a></li>
-												</ul>
-											</div>
-										</div>
+									<div class="contact-info">
+										<h3>Biz bilan bog'laning</h3>
+										<hr class="decorative-line">
+										<p class="contact-item location">
+											<i class="fas fa-map-marker-alt"></i>
+											Address: 2-B, Sheroziy Ko'chasi, 220800, Xonqa, Xorazm Viloyati
+										</p>
+										<p class="contact-item phone">
+											<i class="fas fa-phone"></i>
+											Telefon: <a href="tel:+998905790450">(+998) 90-579-0450</a> (hafta kunlari 09:00-17:00)
+										</p>
 									</div>
 								</section>
-
-							</div>
-							<div class="col-4 col-12-medium">
-
-								<section>
-									<h2>Something of interest</h2>
-									<p>Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed.
-									Suspendisse eu varius nibh. Suspendisse vitae magna eget odio amet
-									mollis justo facilisis quis. Sed sagittis mauris amet tellus gravida
-									lorem ipsum dolor sit blandit.</p>
-									<footer class="controls">
-										<a href="#" class="button">Oh, please continue ....</a>
-									</footer>
-								</section>
-
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-12">
-
 								<div id="copyright">
-									&copy; Madrimov Clinic | Barcha huquqlar himoyalangan</a>
+									&copy; Madrimov Clinic | Barcha huquqlar himoyalangan
 								</div>
-
 							</div>
 						</div>
 					</div>
@@ -328,6 +360,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
