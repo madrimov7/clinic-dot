@@ -292,89 +292,8 @@
 				}
 			}
 		</style>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 	</head>
-	<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.body-part-card').forEach(card => {
-    observer.observe(card);
-  });
-</script>
 	<body>
-		<section id="ultrasound-diagnostics" style="padding: 40px 20px; background-color: #f6faff;">
-  <div class="container">
-    <h2 class="section-title">Ultratovush Diagnostikasi Nimalarni Aniqlaydi?</h2>
-    <p style="text-align: center; max-width: 700px; margin: 0 auto 30px;">
-      Ultratovush (UZI) tananing turli a'zolarini tekshiradi va erta bosqichdagi muammolarni aniqlashda yordam beradi. Quyidagi a’zolar uchun foydali:
-    </p>
-
-    <div class="body-part-grid">
-      <!-- Heart -->
-      <div class="body-part-card scroll-effect">
-        <img src="images/heart.png" alt="Yurak">
-        <h3>Yurak</h3>
-        <p>Yurak urish ritmi va qon oqimini tekshiradi. Yurak yetishmovchiligi yoki klapan muammolari aniqlanadi.</p>
-      </div>
-
-      <!-- Liver -->
-      <div class="body-part-card scroll-effect">
-        <img src="images/liver.png" alt="Jigar">
-        <h3>Jigar</h3>
-        <p>Jigar kattaligi, shishlar yoki yog'li infiltratsiya belgilarini aniqlash mumkin.</p>
-      </div>
-
-      <!-- Kidneys -->
-      <div class="body-part-card scroll-effect">
-        <img src="images/kidney.png" alt="Buyraklar">
-        <h3>Buyraklar</h3>
-        <p>Buyrak toshlari, kistalar yoki yallig’lanishlarni ko’rsatadi.</p>
-      </div>
-
-      <!-- Thyroid -->
-      <div class="body-part-card scroll-effect">
-        <img src="images/thyroid.png" alt="Qalqonsimon bez">
-        <h3>Qalqonsimon bez</h3>
-        <p>Bez kattaligi, tugunlar yoki gormon disbalansi alomatlarini ko’rsatadi.</p>
-      </div>
-
-      <!-- Gallbladder -->
-      <div class="body-part-card scroll-effect">
-        <img src="images/gallbladder.png" alt="O‘t pufagi">
-        <h3>O‘t pufagi</h3>
-        <p>O‘t toshlari yoki yallig‘lanishni aniqlash uchun muhim.</p>
-      </div>
-
-      <!-- Pancreas -->
-      <div class="body-part-card scroll-effect">
-        <img src="images/pancreas.png" alt="Oshqozon osti bezi">
-        <h3>Oshqozon osti bezi</h3>
-        <p>Kistalar, yallig’lanish yoki o’smalarni aniqlash uchun tekshiriladi.</p>
-      </div>
-
-      <!-- Reproductive Organs -->
-      <div class="body-part-card scroll-effect">
-        <img src="images/uterus.png" alt="Ayollar jinsiy a’zolari">
-        <h3>Ayollar jinsiy a’zolari</h3>
-        <p>Homiladorlikni aniqlash, tuxumdonlar va bachadonni baholash uchun muhim.</p>
-      </div>
-
-      <!-- Bladder -->
-      <div class="body-part-card scroll-effect">
-        <img src="images/bladder.png" alt="Peshob pufagi">
-        <h3>Peshob pufagi</h3>
-        <p>Peshobda to‘siqlar, toshlar yoki yallig‘lanish aniqlanadi.</p>
-      </div>
-    </div>
-  </div>
-</section>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -581,65 +500,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-		<section id="ultrasound-diagnostics" class="diagnostics-section">
-  <div class="container">
-    <h2 class="section-title" data-aos="fade-up">Ultratovush Diagnostikasi Qamrovi</h2>
-    <div class="diagnostics-line" data-aos="zoom-in"></div>
-    <div class="diagnostics-grid">
-      
-      <div class="diagnostics-card" data-aos="fade-up">
-        <img src="images/abdomen.png" alt="Qorin" />
-        <h3>Qorin bo‘shlig‘i</h3>
-        <p>Jigar, buyrak, o't pufagi, me'da osti bezi va boshqa a'zolarni ko‘rib, kasalliklarni aniqlaydi.</p>
-      </div>
-
-      <div class="diagnostics-card" data-aos="fade-up">
-        <img src="images/pelvis.png" alt="Chanoq" />
-        <h3>Chanoq sohasida</h3>
-        <p>Ayollar va erkaklar jinsiy a'zolari, pufak va prostata bezini tahlil qiladi.</p>
-      </div>
-
-      <div class="diagnostics-card" data-aos="fade-up">
-        <img src="images/thyroid.png" alt="Qalqonsimon bez" />
-        <h3>Qalqonsimon bez</h3>
-        <p>Gormon buzilishlari va tugunli o‘zgarishlarni aniqlashda yordam beradi.</p>
-      </div>
-
-      <div class="diagnostics-card" data-aos="fade-up">
-        <img src="images/heart.png" alt="Yurak" />
-        <h3>Yurak (Ekokardiyografiya)</h3>
-        <p>Yurak klapanlari, qon oqimi va yurak devorlari holatini baholaydi.</p>
-      </div>
-
-      <div class="diagnostics-card" data-aos="fade-up">
-        <img src="images/breast.png" alt="Ko‘krak" />
-        <h3>Ko‘krak bezi</h3>
-        <p>Kistalar, o‘sma va boshqa o‘zgarishlarni erta bosqichda aniqlash.</p>
-      </div>
-
-      <div class="diagnostics-card" data-aos="fade-up">
-        <img src="images/vessels.png" alt="Qon tomirlar" />
-        <h3>Qon tomirlar (Doppler)</h3>
-        <p>Qon aylanishi, tiqilinchlar va varikoz belgilarini tekshiradi.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-		<!-- Add before </body> -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,
-    once: true
-  });
-</script>
 	</body>
 </html>
-
-
-
 
 
 
