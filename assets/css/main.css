@@ -1560,12 +1560,12 @@ ul.link-list li:first-child {
 /* Banner */
 
 #banner-wrapper {
-    background: #c8d2bc url(images/bg1.png);
-    background-image: url(/images/opening_office.jpg);
-    background-attachment: fixed;
+    background-image: url(images/opening_office.jpg);
+    background-color: #c8d2bc;
     background-size: cover;
     background-position: center;
-    height: calc(100vh - 100px); /* 100px ~ header height */
+    background-attachment: scroll;
+    height: calc(100vh - 100px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1576,14 +1576,14 @@ ul.link-list li:first-child {
     width: 100%;
     padding: 6em 0;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+    background: rgba(255, 255, 255, 0.8);
     text-align: center;
-    box-shadow: none; /* Removed to eliminate grey frame */
+    box-shadow: none;
 }
 
 #banner h2 {
     font-size: 3.3em;
-    color: #008dab; /* Changed from #fff to match header bar color */
+    color: #008dab;
     text-align: center;
     letter-spacing: -2px;
     margin: 0;
@@ -1594,7 +1594,7 @@ ul.link-list li:first-child {
     left: 0;
     margin: 0.5em 0 0 0;
     font-size: 1.6em;
-    color: #008dab; /* Changed from #fff to match header bar color */
+    color: #008dab;
     letter-spacing: -1px;
     opacity: 0.8;
 }
@@ -1610,7 +1610,7 @@ ul.link-list li:first-child {
 
 #footer-wrapper {
     padding: 4em 0;
-    background: linear-gradient(to bottom, #e3e9dc, #d8e0cc); /* Subtle gradient for footer */
+    background: linear-gradient(to bottom, #e3e9dc, #d8e0cc);
 }
 
 /* Copyright */
@@ -1666,12 +1666,12 @@ ul.link-list li:first-child {
 
     #banner h2 {
         font-size: 3em;
-        color: #008dab; /* Changed from #fff to match header bar color */
+        color: #008dab;
     }
 
     #banner span {
         font-size: 1.4em;
-        color: #008dab; /* Changed from #fff to match header bar color */
+        color: #008dab;
     }
 
     /* Footer */
@@ -1722,7 +1722,7 @@ ul.link-list li:first-child {
 
     #banner h2 {
         font-size: 2.5em;
-        color: #008dab; /* Changed from #fff to match header bar color */
+        color: #008dab;
     }
 
     /* Nav */
@@ -1922,28 +1922,32 @@ ul.link-list li:first-child {
 
     /* Banner */
     #banner-wrapper {
-        background: #c8d2bc url(images/bg1.png);
+        background-image: url(images/opening_office.jpg);
+        background-color: #c8d2bc;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
         padding: 20px 0;
     }
 
     #banner {
         box-shadow: none;
         padding: 4em 1em;
-        background: rgba(255, 255, 255, 0.8); /* White background with 50% opacity */
+        background: rgba(255, 255, 255, 0.8);
     }
 
     #banner h2 {
         font-size: 2em;
         letter-spacing: -2px;
         line-height: 1.25em;
-        color: #008dab; /* Changed from #fff to match header bar color */
+        color: #008dab;
     }
 
     #banner span {
         font-size: 1.25em;
         letter-spacing: -1px;
         line-height: 1.25em;
-        color: #008dab; /* Changed from #fff to match header bar color */
+        color: #008dab;
     }
 
     /* Main */
@@ -1985,9 +1989,9 @@ ul.link-list li:first-child {
 /* Card Styles */
 .card-container {
     display: flex;
-    flex-wrap: nowrap; /* Ensure cards stay in one row */
+    flex-wrap: nowrap;
     gap: 20px;
-    justify-content: center; /* Center the cards */
+    justify-content: center;
     padding: 20px;
     max-width: 900px;
     margin: 0 auto;
@@ -1997,15 +2001,15 @@ ul.link-list li:first-child {
     background: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    padding: 15px; /* Reduced padding for smaller cards */
-    width: 200px; /* Reduced width */
+    padding: 15px;
+    width: 200px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: transform 0.2s;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em; /* Slightly reduced font size */
+    font-size: 1em;
     line-height: 1.5;
 }
 
@@ -2020,15 +2024,15 @@ ul.link-list li:first-child {
 
 .card h3 {
     color: #006d99;
-    font-size: 1.4em; /* Reduced header size */
+    font-size: 1.4em;
     margin-bottom: 10px;
     font-weight: 600;
-    text-transform: none; /* Override global text-transform */
+    text-transform: none;
 }
 
 .card p {
     color: #444;
-    font-size: 0.9em; /* Reduced text size */
+    font-size: 0.9em;
     line-height: 1.5;
 }
 
@@ -2045,28 +2049,28 @@ ul.link-list li:first-child {
 .difference-card {
     background: linear-gradient(135deg, #f0f8ff, #e6f3fa);
     border: 2px solid #006d99;
-    padding: 15px; /* Reduced padding */
-    width: 200px; /* Reduced width */
+    padding: 15px;
+    width: 200px;
     text-align: left;
     position: relative;
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em; /* Slightly reduced font size */
+    font-size: 1em;
 }
 
 .difference-card h3 {
     color: #006d99;
-    font-size: 1.4em; /* Reduced header size */
+    font-size: 1.4em;
     margin-bottom: 10px;
     font-weight: 600;
-    text-transform: none; /* Override global text-transform */
+    text-transform: none;
 }
 
 .difference-item {
     margin-bottom: 10px;
     padding-left: 25px;
     position: relative;
-    font-size: 0.9em; /* Reduced text size */
+    font-size: 0.9em;
     color: #00334d;
     cursor: pointer;
 }
@@ -2085,7 +2089,7 @@ ul.link-list li:first-child {
     bottom: 10px;
     right: 10px;
     color: #555;
-    font-size: 0.8em; /* Reduced font size */
+    font-size: 0.8em;
     font-style: italic;
 }
 
@@ -2148,8 +2152,8 @@ ul.link-list li:first-child {
 .map-container {
     background: #fff;
     padding: 20px 0;
-    margin-bottom: 0; /* Remove margin to join with footer */
-    border-bottom: 2px solid #006d99; /* Visual connection to footer */
+    margin-bottom: 0;
+    border-bottom: 2px solid #006d99;
 }
 
 .map-section {
@@ -2208,11 +2212,11 @@ ul.link-list li:first-child {
 }
 
 .contact-info .contact-item.location i {
-    color: #d9534f; /* Red for location pin */
+    color: #d9534f;
 }
 
 .contact-info .contact-item.phone i {
-    color: #28a745; /* Green for phone */
+    color: #28a745;
 }
 
 .contact-info .contact-item a {
@@ -2232,13 +2236,13 @@ ul.link-list li:first-child {
 /* Responsive Design */
 @media (max-width: 768px) {
     .card-container {
-        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        flex-wrap: wrap;
         justify-content: center;
     }
 
     .card, .difference-card {
-        width: 100%; /* Full width on small screens */
-        max-width: 300px; /* Limit max width */
+        width: 100%;
+        max-width: 300px;
         margin-bottom: 20px;
     }
 
@@ -2251,7 +2255,7 @@ ul.link-list li:first-child {
     }
 
     .map-section iframe {
-        height: 300px; /* Smaller height for mobile */
+        height: 300px;
     }
 
     .contact-info {
