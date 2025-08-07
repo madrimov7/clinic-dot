@@ -283,6 +283,192 @@
 		</style>
 	</head>
 	<body>
+		<div id="main">
+    <div class="container">
+        <div class="row main-row">
+            <div class="col-12">
+                <section>
+                    <h2>Yangiliklar</h2>
+                    <div class="news-container">
+                        <div class="news-card" onclick="togglePopup(this)">
+                            <h3>Breakthrough in Ultrasound Diagnostics</h3>
+                            <p>New advancements in portable ultrasound technology enhance real-time diagnostics.</p>
+                            <a href="https://example.com/ultrasound-breakthrough" target="_blank">Read More</a>
+                        </div>
+                        <div class="news-card" onclick="togglePopup(this)">
+                            <h3>Physiotherapy Innovations with Ultrasound</h3>
+                            <p>Latest techniques improve muscle recovery using targeted ultrasound therapy.</p>
+                            <a href="https://example.com/physio-ultrasound" target="_blank">Read More</a>
+                        </div>
+                        <div class="news-card" onclick="togglePopup(this)">
+                            <h3>AI Integration in Ultrasound Imaging</h3>
+                            <p>Artificial intelligence boosts accuracy in ultrasound diagnostics.</p>
+                            <a href="https://example.com/ai-ultrasound" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .news-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .news-card {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
+
+    .news-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .news-card h3 {
+        color: #006d99;
+        font-size: 1.4em;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .news-card p {
+        color: #444;
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .news-card a {
+        color: #006d99;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .news-card a:hover {
+        text-decoration: underline;
+    }
+
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        border: 2px solid #006d99;
+        border-radius: 8px;
+        padding: 20px;
+        width: 400px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        z-index: 1000;
+        text-align: left;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .popup.active {
+        display: block;
+        animation: popUp 0.3s ease-out;
+    }
+
+    .popup h3 {
+        color: #006d99;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .popup p {
+        color: #444;
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .popup a {
+        color: #006d99;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .popup a:hover {
+        text-decoration: underline;
+    }
+
+    .popup .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.2em;
+        color: #cc3300;
+        cursor: pointer;
+    }
+
+    @keyframes popUp {
+        0% { transform: translate(-50%, -50%) scale(0.7); opacity: 0; }
+        100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    }
+
+    /* Overlay for popup */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+</style>
+
+<script>
+    function togglePopup(card) {
+        const popup = document.createElement('div');
+        popup.className = 'popup';
+        popup.innerHTML = `
+            <span class="close-btn" onclick="this.parentElement.style.display='none'; document.querySelector('.overlay').classList.remove('active')">×</span>
+            <h3>${card.querySelector('h3').textContent}</h3>
+            <p>${card.querySelector('p').textContent}</p>
+            <a href="${card.querySelector('a').href}" target="_blank">Read More</a>
+        `;
+
+        document.body.appendChild(popup);
+        document.body.insertAdjacentHTML('beforeend', '<div class="overlay"></div>');
+        document.querySelector('.overlay').classList.add('active');
+        popup.classList.add('active');
+
+        popup.querySelector('.close-btn').addEventListener('click', () => {
+            popup.remove();
+            document.querySelector('.overlay').remove();
+        });
+
+        // Close popup when clicking overlay
+        document.querySelector('.overlay').addEventListener('click', () => {
+            popup.remove();
+            document.querySelector('.overlay').remove();
+        });
+    }
+</script>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -377,3 +563,4 @@
 			<script src="assets/js/main.js"></script>
 	</body>
 </html>
+
