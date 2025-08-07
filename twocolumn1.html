@@ -295,6 +295,19 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 	</head>
+	<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.body-part-card').forEach(card => {
+    observer.observe(card);
+  });
+</script>
 	<body>
 		<section id="ultrasound-diagnostics" style="padding: 40px 20px; background-color: #f6faff;">
   <div class="container">
@@ -624,6 +637,7 @@
 </script>
 	</body>
 </html>
+
 
 
 
