@@ -260,6 +260,18 @@
 				background: #006d99;
 				margin: 10px 0;
 			}
+			/* Responsive design for mobile devices */
+			@media screen and (max-width: 768px) {
+				.card-container {
+					flex-wrap: wrap; /* Stack cards vertically on mobile */
+					flex-direction: column; /* Ensure vertical stacking */
+					align-items: center; /* Center cards */
+				}
+				.card {
+					width: 90%; /* Full width for cards on mobile */
+					margin-bottom: 20px; /* Add space between stacked cards */
+				}
+			}
 		</style>
 	</head>
 	<body>
