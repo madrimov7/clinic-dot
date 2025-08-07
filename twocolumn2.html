@@ -406,6 +406,14 @@
 			.overlay.active {
 				display: block;
 			}
+
+			/* Updated styles for Yangiliklar and news cards */
+			section h2 {
+				font-size: 2.5em; /* Increased font size for Yangiliklar */
+				color: #00334d;
+				text-align: center;
+				margin-bottom: 20px;
+			}
 		</style>
 	</head>
 	<body>
@@ -421,7 +429,7 @@
 									<nav id="nav">
 										<a href="index.html">Bosh sahifa</a>
 										<a href="twocolumn1.html">Xizmatlar</a>
-										<a href="twocolumn2.html" class="current-page-item">Yangiliklar</a>
+										<a href="twocolumn2.html"NAc class="current-page-item">Yangiliklar</a>
 										<a href="onecolumn.html">Bog'lanish</a>
 										<a href="threecolumn.html">Bizning xodimlar</a>
 									</nav>
@@ -434,31 +442,28 @@
 				<div id="main">
 					<div class="container">
 						<div class="row main-row">
-							<div class="col-4 col-12-medium">
+							<div class="col-12"> <!-- Changed from col-4 and col-8 to col-12 to center content -->
+								<section>
+									<h2>Yangiliklar</h2>
+									<div class="news-container">
+										<div class="news-card">
+											<h3>Yangi UZI Qurilmasi</h3>
+											<p>Biz klinikamizga yangi yuqori aniqlikdagi ultratovush apparatini olib keldik.</p>
+											<a href="#">Batafsil o'qish</a>
+										</div>
+										<div class="news-card">
+											<h3>Fizioterapiya Xizmati Endi Mavjud</h3>
+											<p>Endilikda siz bizda zamonaviy fizioterapiya xizmatlaridan foydalanishingiz mumkin.</p>
+											<a href="#">Batafsil o'qish</a>
+										</div>
+										<div class="news-card">
+											<h3>Yangi Shifokor Qo‘shildi</h3>
+											<p>Jamoamizga professional fizioterapevt Sh. Turgunov qo‘shildi.</p>
+											<a href="#">Batafsil o'qish</a>
+										</div>
+									</div>
+								</section>
 							</div>
-							<div class="col-8 col-12-medium imp-medium">
-	<section>
-		<h2>Yangiliklar</h2>
-		<div class="news-container">
-			<div class="news-card">
-				<h3>Yangi UZI Qurilmasi</h3>
-				<p>Biz klinikamizga yangi yuqori aniqlikdagi ultratovush apparatini olib keldik.</p>
-				<a href="#">Batafsil o'qish</a>
-			</div>
-			<div class="news-card">
-				<h3>Fizioterapiya Xizmati Endi Mavjud</h3>
-				<p>Endilikda siz bizda zamonaviy fizioterapiya xizmatlaridan foydalanishingiz mumkin.</p>
-				<a href="#">Batafsil o'qish</a>
-			</div>
-			<div class="news-card">
-				<h3>Yangi Shifokor Qo‘shildi</h3>
-				<p>Jamoamizga professional fizioterapevt Sh. Turgunov qo‘shildi.</p>
-				<a href="#">Batafsil o'qish</a>
-			</div>
-		</div>
-	</section>
-</div>
-
 						</div>
 					</div>
 				</div>
@@ -520,4 +525,3 @@
 			<script src="assets/js/main.js"></script>
 	</body>
 </html>
-
