@@ -6,14 +6,15 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<style>
 			.card-container {
 				display: flex;
 				flex-wrap: nowrap;
-				gap: 40px; /* Increased gap for better spacing */
+				gap: 40px;
 				justify-content: center;
 				padding: 40px 20px;
-				width: 100%; /* Full screen width */
+				width: 100%;
 				margin: 0 auto;
 			}
 			.card {
@@ -21,7 +22,7 @@
 				border: 2px solid #e0e0e0;
 				border-radius: 12px;
 				padding: 30px;
-				width: 30%; /* Equal width for three cards */
+				width: 30%;
 				text-align: center;
 				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 				transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -40,7 +41,7 @@
 			}
 			.card h3 {
 				color: #006d99;
-				font-size: 1.6em; /* Decreased size for names */
+				font-size: 1.6em;
 				margin: 20px 0;
 				font-weight: 600;
 			}
@@ -52,7 +53,7 @@
 			.card img {
 				width: 100%;
 				height: auto;
-				max-height: 300px; /* Increased image size */
+				max-height: 300px;
 				object-fit: cover;
 				border-radius: 8px;
 				margin-bottom: 20px;
@@ -260,16 +261,68 @@
 				background: #006d99;
 				margin: 10px 0;
 			}
-			/* Responsive design for mobile devices */
+			.social-media-section {
+				text-align: center;
+				padding: 20px 0;
+				background: #f0f8ff;
+				border-top: 2px solid #006d99;
+				border-bottom: 2px solid #006d99;
+				margin: 20px 0;
+			}
+			.social-media-section h3 {
+				font-family: Arial, Helvetica, sans-serif;
+				color: #00334d;
+				font-size: 1.8em;
+				margin-bottom: 15px;
+				text-transform: uppercase;
+			}
+			.social-media-icons {
+				display: flex;
+				justify-content: center;
+				gap: 20px;
+				flex-wrap: wrap;
+			}
+			.social-media-icons a {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				color: #006d99;
+				text-decoration: none;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.2em;
+				transition: transform 0.3s ease, color 0.3s ease;
+			}
+			.social-media-icons a:hover {
+				transform: scale(1.1);
+				color: #cc3300;
+			}
+			.social-media-icons i {
+				font-size: 2em;
+				transition: transform 0.3s ease;
+			}
+			.social-media-icons a:hover i {
+				transform: rotate(360deg);
+			}
+			@media (max-width: 768px) {
+				.social-media-icons {
+					gap: 15px;
+				}
+				.social-media-icons a {
+					font-size: 1em;
+				}
+				.social-media-icons i {
+					font-size: 1.5em;
+				}
+			}
 			@media screen and (max-width: 768px) {
 				.card-container {
-					flex-wrap: wrap; /* Stack cards vertically on mobile */
-					flex-direction: column; /* Ensure vertical stacking */
-					align-items: center; /* Center cards */
+					flex-wrap: wrap;
+					flex-direction: column;
+					align-items: center;
 				}
 				.card {
-					width: 90%; /* Full width for cards on mobile */
-					margin-bottom: 20px; /* Add space between stacked cards */
+					width: 90%;
+					margin-bottom: 20px;
 				}
 			}
 		</style>
@@ -301,7 +354,7 @@
 				<div id="main">
 					<div class="container">
 						<div class="row main-row">
-							<div class="col-12 col-12-medium"> <!-- Expanded to full width -->
+							<div class="col-12 col-12-medium">
 								<section>
 									<h2 style="text-align: center; color: #006d99; font-size: 2.5em;">Bizning xodimlar</h2>
 									<div class="card-container">
@@ -362,6 +415,24 @@
 											<i class="fas fa-phone"></i>
 											Telefon: <a href="tel:+998905790450">(+998) 90-579-0450</a> (hafta kunlari 09:00-17:00)
 										</p>
+									</div>
+								</section>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<section class="social-media-section">
+									<h3>Bizning ijtimoiy tarmoqlar</h3>
+									<div class="social-media-icons">
+										<a href="https://www.instagram.com/madrimov_clinic" target="_blank" rel="noopener noreferrer">
+											<i class="fab fa-instagram"></i> Instagram
+										</a>
+										<a href="https://t.me/madrimov_clinic" target="_blank" rel="noopener noreferrer">
+											<i class="fab fa-telegram-plane"></i> Telegram
+										</a>
+										<a href="https://www.youtube.com/@madrimov_clinic" target="_blank" rel="noopener noreferrer">
+											<i class="fab fa-youtube"></i> YouTube
+										</a>
 									</div>
 								</section>
 							</div>
