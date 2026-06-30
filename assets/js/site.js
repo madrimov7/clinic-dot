@@ -190,16 +190,6 @@ function getInitialLanguage() {
     return urlLanguage;
   }
 
-  const savedLanguage = localStorage.getItem("madrimovClinicLanguage");
-  if (supportedLanguages.includes(savedLanguage)) {
-    return savedLanguage;
-  }
-
-  const browserLanguage = navigator.language.slice(0, 2).toLowerCase();
-  if (supportedLanguages.includes(browserLanguage)) {
-    return browserLanguage;
-  }
-
   return fallbackLanguage;
 }
 
@@ -226,8 +216,6 @@ function setLanguage(language) {
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-pressed", String(isActive));
   });
-
-  localStorage.setItem("madrimovClinicLanguage", language);
 }
 
 document.querySelectorAll("[data-lang-button]").forEach((button) => {
