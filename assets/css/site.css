@@ -201,8 +201,8 @@ textarea {
 }
 
 .hero-media {
-  background-image: url("../../images/photoP2.jpg");
-  background-position: 70% center;
+  background-image: url("../../images/clinic-exterior.jpg");
+  background-position: center center;
   background-size: cover;
   transform: scale(1.02);
 }
@@ -286,6 +286,18 @@ textarea {
 .button-light:hover,
 .button-light:focus-visible {
   background: #fff;
+}
+
+.button-instagram {
+  background: rgba(234, 245, 255, 0.94);
+  color: var(--blue-900);
+  border-color: rgba(255, 255, 255, 0.42);
+}
+
+.button-instagram:hover,
+.button-instagram:focus-visible {
+  background: #fff;
+  color: var(--blue-700);
 }
 
 .hero-stats {
@@ -441,7 +453,7 @@ textarea {
   height: 260px;
   display: block;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center center;
 }
 
 .service-card-wide img {
@@ -702,7 +714,7 @@ textarea {
   }
 
   .hero-media {
-    background-position: 66% center;
+    background-position: 50% center;
   }
 
   .info-grid,
@@ -739,7 +751,7 @@ textarea {
   }
 
   .brand span {
-    max-width: 118px;
+    max-width: 140px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
