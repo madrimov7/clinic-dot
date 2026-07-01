@@ -3,17 +3,58 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Madrimov Clinic - Xonqa shahrida UZI diagnostika va fizioterapiya xizmatlari. Qabulga yozilish uchun telefon yoki Telegram orqali bog'laning.">
-  <meta name="theme-color" content="#0b5cad">
-  <meta property="og:title" content="Madrimov Clinic">
-  <meta property="og:description" content="Xonqa shahrida UZI diagnostika, fizioterapiya va shifokor ko'rigi.">
+  <meta name="description" content="Madrimov Clinic — Xonqa shahrida UZI diagnostika, fizioterapiya va shifokor maslahati. Qabulga telefon yoki Telegram orqali yoziling.">
+  <meta name="theme-color" content="#0e2440">
+  <link rel="canonical" href="https://madrimovclinic.site/">
+  <link rel="alternate" hreflang="uz" href="https://madrimovclinic.site/">
+  <link rel="alternate" hreflang="ru" href="https://madrimovclinic.site/?lang=ru">
+  <link rel="alternate" hreflang="en" href="https://madrimovclinic.site/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://madrimovclinic.site/">
+  <meta property="og:title" content="Madrimov Clinic — UZI diagnostika va fizioterapiya, Xonqa">
+  <meta property="og:description" content="Aniq tashxis va g'amxo'r muolaja — o'z shahringizda. Qabulga telefon yoki Telegram orqali yoziling.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://madrimovclinic.site/">
   <meta property="og:image" content="https://madrimovclinic.site/images/clinic-exterior.jpg">
-  <title>Madrimov Clinic</title>
+  <title>Madrimov Clinic — UZI diagnostika va fizioterapiya, Xonqa</title>
   <link rel="icon" type="image/png" href="images/favicon-32x32.png">
-  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata&family=Golos+Text:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="assets/css/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Madrimov Clinic",
+    "url": "https://madrimovclinic.site/",
+    "image": "https://madrimovclinic.site/images/clinic-exterior.jpg",
+    "telephone": "+998905790450",
+    "email": "madrimov.clinic@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2-B Sheroziy ko'chasi",
+      "addressLocality": "Xonqa",
+      "addressRegion": "Xorazm viloyati",
+      "addressCountry": "UZ"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.4771301,
+      "longitude": 60.7743219
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    "sameAs": [
+      "https://www.instagram.com/madrimov_clinic/",
+      "https://t.me/madrimov_clinic",
+      "https://www.youtube.com/@madrimov_clinic"
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Asosiy mazmunga o'tish</a>
@@ -21,14 +62,15 @@
   <header class="site-header" data-header>
     <div class="site-shell header-inner">
       <a class="brand" href="#home" aria-label="Madrimov Clinic">
-        <img src="images/MC_logo12-Photoroom.jpg" alt="" width="44" height="44">
-        <span>Madrimov Clinic</span>
+        <img src="images/MC_logo12-Photoroom.jpg" alt="" width="42" height="42">
+        <span class="brand-name">Madrimov <em>Clinic</em></span>
       </a>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#services" data-i18n="nav.services">Xizmatlar</a>
         <a href="#team" data-i18n="nav.team">Jamoa</a>
         <a href="#reviews" data-i18n="nav.reviews">Fikrlar</a>
+        <a href="#faq" data-i18n="nav.faq">Savollar</a>
         <a href="#contact" data-i18n="nav.contact">Aloqa</a>
       </nav>
 
@@ -39,155 +81,232 @@
           <button type="button" data-lang-button="en">EN</button>
         </div>
         <a class="header-call" href="tel:+998905790450">
-          <i class="fas fa-phone" aria-hidden="true"></i>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.2c.6-.2 1.3.1 1.6.7l1.3 2.6c.3.5.2 1.2-.2 1.6l-1.2 1.2a13.4 13.4 0 0 0 6.6 6.6l1.2-1.2c.4-.4 1.1-.5 1.6-.2l2.6 1.3c.6.3.9 1 .7 1.6l-.7 2.1c-.2.7-.9 1.2-1.6 1.1C10.6 19.9 4.1 13.4 3.4 5.5c-.1-.7.4-1.4 1.1-1.6z"/></svg>
           <span>+998 90 579 04 50</span>
         </a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+          <span></span><span></span>
+        </button>
       </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+      <nav aria-label="Mobile navigation">
+        <a href="#services" data-i18n="nav.services">Xizmatlar</a>
+        <a href="#team" data-i18n="nav.team">Jamoa</a>
+        <a href="#reviews" data-i18n="nav.reviews">Fikrlar</a>
+        <a href="#faq" data-i18n="nav.faq">Savollar</a>
+        <a href="#contact" data-i18n="nav.contact">Aloqa</a>
+      </nav>
+      <a class="button button-primary" href="tel:+998905790450">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.2c.6-.2 1.3.1 1.6.7l1.3 2.6c.3.5.2 1.2-.2 1.6l-1.2 1.2a13.4 13.4 0 0 0 6.6 6.6l1.2-1.2c.4-.4 1.1-.5 1.6-.2l2.6 1.3c.6.3.9 1 .7 1.6l-.7 2.1c-.2.7-.9 1.2-1.6 1.1C10.6 19.9 4.1 13.4 3.4 5.5c-.1-.7.4-1.4 1.1-1.6z"/></svg>
+        <span data-i18n="cta.call">Qo'ng'iroq qilish</span>
+      </a>
     </div>
   </header>
 
   <main id="main">
     <section id="home" class="hero" aria-labelledby="hero-title">
-      <div class="hero-media" role="img" aria-label="Madrimov Clinic exterior"></div>
-      <div class="hero-overlay"></div>
-      <div class="site-shell hero-content">
-        <p class="eyebrow" data-i18n="hero.eyebrow">Xonqa, Xorazm viloyati</p>
-        <h1 id="hero-title">Madrimov Clinic</h1>
-        <p class="hero-lede" data-i18n="hero.lede">UZI diagnostika, fizioterapiya va shifokor ko'rigi uchun ishonchli mahalliy klinika.</p>
-        <div class="hero-actions" aria-label="Appointment actions">
-          <a class="button button-primary" href="tel:+998905790450">
-            <i class="fas fa-phone" aria-hidden="true"></i>
-            <span data-i18n="cta.call">Qo'ng'iroq qilish</span>
-          </a>
-          <a class="button button-light" href="https://t.me/madrimov_clinic" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-telegram-plane" aria-hidden="true"></i>
-            <span data-i18n="cta.telegram">Telegram orqali yozish</span>
-          </a>
-          <a class="button button-instagram" href="https://www.instagram.com/madrimov_clinic/" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-instagram" aria-hidden="true"></i>
-            <span data-i18n="cta.instagram">Instagram</span>
-          </a>
+      <div class="site-shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Xonqa · Xorazm viloyati</p>
+          <h1 id="hero-title" data-i18n="hero.title">Aniq tashxis va g'amxo'r muolaja — o'z shahringizda</h1>
+          <p class="hero-lede" data-i18n="hero.lede">Madrimov Clinic — Xonqada UZI diagnostika, fizioterapiya va shifokor maslahati. Qabulga telefon yoki Telegram orqali bir necha daqiqada yoziling.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="tel:+998905790450">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.2c.6-.2 1.3.1 1.6.7l1.3 2.6c.3.5.2 1.2-.2 1.6l-1.2 1.2a13.4 13.4 0 0 0 6.6 6.6l1.2-1.2c.4-.4 1.1-.5 1.6-.2l2.6 1.3c.6.3.9 1 .7 1.6l-.7 2.1c-.2.7-.9 1.2-1.6 1.1C10.6 19.9 4.1 13.4 3.4 5.5c-.1-.7.4-1.4 1.1-1.6z"/></svg>
+              <span data-i18n="cta.call">Qo'ng'iroq qilish</span>
+            </a>
+            <a class="button button-telegram" href="https://t.me/madrimov_clinic" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 3.3c.3-.9-.6-1.6-1.4-1.3L2.9 8.7c-.9.3-.9 1.6 0 1.9l4.4 1.5 1.7 5.3c.2.8 1.2 1 1.8.4l2.4-2.3 4.5 3.3c.7.5 1.6.1 1.8-.7zM8.5 11.6l8.7-5.4c.2-.1.4.2.2.3l-7.2 6.5c-.2.2-.4.5-.4.8l-.3 2.3c0 .3-.5.4-.6.1l-1-3.3c-.1-.4 0-.9.4-1.1z"/></svg>
+              <span data-i18n="cta.telegram">Telegramda yozish</span>
+            </a>
+          </div>
+          <ul class="hero-proof" aria-label="Clinic highlights">
+            <li><strong>15+</strong> <span data-i18n="stats.experience">yil tajriba</span></li>
+            <li><strong>10 000+</strong> <span data-i18n="stats.patients">bemor ishonchi</span></li>
+            <li><strong data-i18n="stats.days">6 kun</strong> <span data-i18n="stats.open">haftasiga qabul</span></li>
+          </ul>
         </div>
-        <dl class="hero-stats" aria-label="Clinic highlights">
-          <div>
-            <dt>15+</dt>
-            <dd data-i18n="stats.experience">yillik tajriba</dd>
-          </div>
-          <div>
-            <dt>10k+</dt>
-            <dd data-i18n="stats.patients">bemorlar ishonchi</dd>
-          </div>
-          <div>
-            <dt>09:00</dt>
-            <dd data-i18n="stats.open">qabul boshlanishi</dd>
-          </div>
-        </dl>
+
+        <figure class="hero-figure">
+          <img src="images/clinic-exterior.jpg" alt="Madrimov Clinic binosi, Xonqa" fetchpriority="high">
+          <figcaption class="hero-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 1.8a8.2 8.2 0 1 1 0 16.4 8.2 8.2 0 0 1 0-16.4zm.9 3.2a.9.9 0 0 0-1.8 0v5c0 .3.1.6.4.7l3.5 2.1a.9.9 0 1 0 .9-1.5l-3-1.8z"/></svg>
+            <div>
+              <strong data-i18n="hero.card.title">Ish vaqti</strong>
+              <span data-i18n="hero.card.body">Dush–Shan · 09:00–17:00</span>
+            </div>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
     <section class="info-band" aria-label="Clinic information">
       <div class="site-shell info-grid">
         <article>
-          <i class="far fa-clock" aria-hidden="true"></i>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 1.8a8.2 8.2 0 1 1 0 16.4 8.2 8.2 0 0 1 0-16.4zm.9 3.2a.9.9 0 0 0-1.8 0v5c0 .3.1.6.4.7l3.5 2.1a.9.9 0 1 0 .9-1.5l-3-1.8z"/></svg>
           <div>
             <h2 data-i18n="info.hours.title">Ish vaqti</h2>
-            <p data-i18n="info.hours.body">Dushanba - Shanba, 09:00 - 17:00. Tushlik: 13:00 - 14:00.</p>
+            <p data-i18n="info.hours.body">Dushanba – Shanba, 09:00 – 17:00. Tushlik: 13:00 – 14:00.</p>
           </div>
         </article>
         <article>
-          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7.5 7.5 0 0 0-7.5 7.5c0 5.1 6.4 11.6 6.7 11.9a1.1 1.1 0 0 0 1.6 0c.3-.3 6.7-6.8 6.7-11.9A7.5 7.5 0 0 0 12 2zm0 10.2a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4z"/></svg>
           <div>
             <h2 data-i18n="info.address.title">Manzil</h2>
             <p data-i18n="info.address.body">2-B, Sheroziy ko'chasi, Xonqa, Xorazm viloyati.</p>
           </div>
         </article>
         <article>
-          <i class="fas fa-calendar-check" aria-hidden="true"></i>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 3h-1V2a1 1 0 0 0-2 0v1H9V2a1 1 0 0 0-2 0v1H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm1 15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V9h14zm-8.1-1.6 5-5a.9.9 0 0 0-1.3-1.3l-4.4 4.4-1.8-1.8a.9.9 0 0 0-1.3 1.3l2.5 2.4c.3.4.9.4 1.3 0z"/></svg>
           <div>
             <h2 data-i18n="info.booking.title">Qabulga yozilish</h2>
-            <p data-i18n="info.booking.body">Telefon yoki Telegram orqali vaqtni kelishib oling.</p>
+            <p data-i18n="info.booking.body">Telefon yoki Telegram orqali qulay vaqtni kelishib oling.</p>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="services" class="section section-light" aria-labelledby="services-title">
+    <section id="services" class="section" aria-labelledby="services-title">
       <div class="site-shell">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <p class="eyebrow" data-i18n="services.eyebrow">Xizmatlar</p>
-          <h2 id="services-title" data-i18n="services.title">Asosiy yo'nalishlar</h2>
-          <p data-i18n="services.intro">Klinika diagnostika va tiklanish jarayonida tushunarli maslahat, ehtiyotkor ko'rik va individual yondashuvga urg'u beradi.</p>
+          <h2 id="services-title" data-i18n="services.title">Asosiy yo'nalishlarimiz</h2>
+          <p data-i18n="services.intro">Diagnostikadan tiklanishgacha — tushunarli maslahat, ehtiyotkor ko'rik va har bir bemorga individual yondashuv.</p>
         </div>
 
         <div class="service-grid">
-          <article class="service-card">
+          <article class="service-card reveal">
             <img src="images/ultrasound-service.jpg" alt="" loading="lazy">
-            <div>
+            <div class="service-body">
               <h3 data-i18n="service.ultrasound.title">UZI diagnostika</h3>
-              <p data-i18n="service.ultrasound.body">Ichki a'zolar holatini baholash, homiladorlik kuzatuvi va shifokor tavsiyasi bo'yicha tekshiruvlar.</p>
+              <p data-i18n="service.ultrasound.body">Zamonaviy apparatda ichki a'zolar holatini nurlanishsiz, og'riqsiz baholash.</p>
               <ul>
-                <li data-i18n="service.ultrasound.point1">Nurlanishsiz tekshiruv</li>
-                <li data-i18n="service.ultrasound.point2">Natijani tushuntirib berish</li>
-                <li data-i18n="service.ultrasound.point3">Oldindan yozilish imkoniyati</li>
+                <li data-i18n="service.ultrasound.point1">Qorin bo'shlig'i va ichki a'zolar tekshiruvi</li>
+                <li data-i18n="service.ultrasound.point2">Homiladorlik kuzatuvi</li>
+                <li data-i18n="service.ultrasound.point3">Natijalar joyida tushuntiriladi</li>
               </ul>
             </div>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal">
             <img src="images/physiotherapy-service.jpg" alt="" loading="lazy">
-            <div>
+            <div class="service-body">
               <h3 data-i18n="service.physio.title">Fizioterapiya</h3>
-              <p data-i18n="service.physio.body">Bel, bo'g'im, mushak va tiklanish davriga oid muolajalar shifokor nazorati asosida tanlanadi.</p>
+              <p data-i18n="service.physio.body">Bel, bo'g'im va mushak og'riqlarida shifokor nazorati ostidagi muolajalar.</p>
               <ul>
-                <li data-i18n="service.physio.point1">Og'riqni kamaytirishga qaratilgan muolajalar</li>
-                <li data-i18n="service.physio.point2">Harakatni tiklashga yordam</li>
-                <li data-i18n="service.physio.point3">Reja bemor holatiga moslanadi</li>
+                <li data-i18n="service.physio.point1">Manual muolajalar va davolovchi massaj</li>
+                <li data-i18n="service.physio.point2">Elektroterapiya muolajalari</li>
+                <li data-i18n="service.physio.point3">Reja bemor holatiga moslab tuziladi</li>
               </ul>
             </div>
           </article>
 
-          <article class="service-card service-card-wide">
-            <img src="images/UltrasoundDiagnostics.jpg" alt="" loading="lazy">
-            <div>
+          <article class="service-card service-card-wide reveal">
+            <img src="images/photoP1.jpg" alt="" loading="lazy" style="object-position: center 30%">
+            <div class="service-body">
               <h3 data-i18n="service.consult.title">Shifokor ko'rigi va maslahat</h3>
-              <p data-i18n="service.consult.body">Belgilar, avvalgi xulosalar va tekshiruv natijalari asosida keyingi qadamlar tushunarli qilib tavsiya qilinadi.</p>
+              <p data-i18n="service.consult.body">Belgilar, avvalgi xulosalar va tekshiruv natijalari asosida keyingi qadamlar tushunarli qilib belgilanadi.</p>
               <ul>
-                <li data-i18n="service.consult.point1">Savollarga aniq javob</li>
-                <li data-i18n="service.consult.point2">Keraksiz muolajalardan qochish</li>
+                <li data-i18n="service.consult.point1">Savollarga aniq va ochiq javob</li>
+                <li data-i18n="service.consult.point2">Keraksiz muolajalarsiz — faqat zarur tekshiruvlar</li>
                 <li data-i18n="service.consult.point3">Oilaviy maslahat uchun qulay aloqa</li>
               </ul>
             </div>
           </article>
         </div>
+
+        <p class="service-help reveal">
+          <span data-i18n="services.help">Qaysi xizmat kerakligini bilmayapsizmi? Qo'ng'iroq qiling — yo'naltirib yuboramiz:</span>
+          <a href="tel:+998905790450">+998 90 579 04 50</a>
+        </p>
       </div>
     </section>
 
-    <section id="team" class="section" aria-labelledby="team-title">
+    <section class="section section-dark why-section" aria-labelledby="why-title">
       <div class="site-shell">
-        <div class="section-heading section-heading-row">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="why.eyebrow">Nega aynan biz</p>
+          <h2 id="why-title" data-i18n="why.title">Bemorlar bizni nima uchun tanlaydi</h2>
+        </div>
+        <div class="why-grid">
+          <article class="reveal">
+            <span class="why-num">01</span>
+            <h3 data-i18n="why.one.title">Tajribali jamoa</h3>
+            <p data-i18n="why.one.body">15 yildan ortiq amaliyot va minglab bemorlar bilan ishlash tajribasi.</p>
+          </article>
+          <article class="reveal">
+            <span class="why-num">02</span>
+            <h3 data-i18n="why.two.title">Tushunarli muloqot</h3>
+            <p data-i18n="why.two.body">Tashxis va davolash rejasi oddiy tilda, shoshilmasdan tushuntiriladi.</p>
+          </article>
+          <article class="reveal">
+            <span class="why-num">03</span>
+            <h3 data-i18n="why.three.title">Faqat kerakli muolajalar</h3>
+            <p data-i18n="why.three.body">Ortiqcha tekshiruv va xarajatlarsiz — holatingizga mos aniq reja.</p>
+          </article>
+          <article class="reveal">
+            <span class="why-num">04</span>
+            <h3 data-i18n="why.four.title">Yaqin va qulay</h3>
+            <p data-i18n="why.four.body">Klinika Xonqa markazida — uzoqqa bormasdan sifatli tibbiy xizmat.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section steps-section" aria-labelledby="steps-title">
+      <div class="site-shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="steps.eyebrow">Qanday ishlaydi</p>
+          <h2 id="steps-title" data-i18n="steps.title">Qabulgacha — uch qadam</h2>
+        </div>
+        <ol class="steps-grid">
+          <li class="reveal">
+            <span class="step-num">1</span>
+            <h3 data-i18n="steps.one.title">Bog'laning</h3>
+            <p data-i18n="steps.one.body">Telefon yoki Telegram orqali qulay kun va vaqtni tanlang.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-num">2</span>
+            <h3 data-i18n="steps.two.title">Ko'rikka keling</h3>
+            <p data-i18n="steps.two.body">Avvalgi xulosa va natijalarni olib keling — ko'rik va tekshiruv o'tkaziladi.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-num">3</span>
+            <h3 data-i18n="steps.three.title">Natija va reja</h3>
+            <p data-i18n="steps.three.body">Natijalar tushuntiriladi, davolash rejasi va keyingi qadamlar belgilanadi.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="team" class="section section-tint" aria-labelledby="team-title">
+      <div class="site-shell">
+        <div class="section-heading section-heading-row reveal">
           <div>
             <p class="eyebrow" data-i18n="team.eyebrow">Jamoa</p>
             <h2 id="team-title" data-i18n="team.title">Siz bilan ishlaydigan mutaxassislar</h2>
           </div>
-          <p data-i18n="team.intro">Jamoa mahalliy bemorlar bilan uzoq muddatli ishonch, samimiy muloqot va amaliy natijaga tayanib ishlaydi.</p>
+          <p data-i18n="team.intro">Jamoa mahalliy bemorlar bilan uzoq yillik ishonch, samimiy muloqot va amaliy natijaga tayanib ishlaydi.</p>
         </div>
 
         <div class="team-grid">
-          <article class="team-card">
+          <article class="team-card reveal">
             <img src="images/photoP1.jpg" alt="Alisher Madrimov" loading="lazy">
             <div>
               <h3>Alisher Madrimov</h3>
               <p data-i18n="team.alisher.role">Fizioterapiya</p>
             </div>
           </article>
-          <article class="team-card">
+          <article class="team-card reveal">
             <img src="images/photoP2.jpg" alt="Yulduz Yuldasheva" loading="lazy">
             <div>
               <h3>Yulduz Yuldasheva</h3>
               <p data-i18n="team.yulduz.role">UZI diagnostika</p>
             </div>
           </article>
-          <article class="team-card">
+          <article class="team-card reveal">
             <img src="images/photoP5.jpg" alt="Gulbahor Tairova" loading="lazy">
             <div>
               <h3>Gulbahor Tairova</h3>
@@ -198,20 +317,21 @@
       </div>
     </section>
 
-    <section id="reviews" class="section section-blue" aria-labelledby="reviews-title">
+    <section id="reviews" class="section" aria-labelledby="reviews-title">
       <div class="site-shell review-layout">
-        <div class="section-heading">
-          <p class="eyebrow eyebrow-light" data-i18n="reviews.eyebrow">Bemorlar fikri</p>
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="reviews.eyebrow">Bemorlar fikri</p>
           <h2 id="reviews-title" data-i18n="reviews.title">Doimiy bemorlar ishonchi</h2>
-          <p data-i18n="reviews.intro">Klinika haqida fikrlar bemorlarning shaxsiy tajribasiga asoslangan. Tibbiy natija har bir bemorda alohida baholanadi.</p>
+          <p data-i18n="reviews.intro">Fikrlar bemorlarning shaxsiy tajribasiga asoslangan. Tibbiy natija har bir bemorda alohida baholanadi.</p>
+          <a class="text-link" href="https://maps.google.com/?cid=1585587424425153465" target="_blank" rel="noopener noreferrer" data-i18n="reviews.cta">Google xaritada fikr qoldirish →</a>
         </div>
 
         <div class="review-cards">
-          <blockquote>
+          <blockquote class="reveal">
             <p data-i18n="review.one">Madrimov klinikasiga ko'p yildan beri UZI diagnostika uchun kelaman. Xizmat tez, tushunarli va e'tiborli.</p>
             <cite>Oyimjon Matniyazova</cite>
           </blockquote>
-          <blockquote>
+          <blockquote class="reveal">
             <p data-i18n="review.two">Fizioterapiya muolajalari bel og'rig'imni boshqarishda yordam berdi. Shifokorlar muammoni tushuntirib, reja bilan ishlashadi.</p>
             <cite>Solay Sobirov</cite>
           </blockquote>
@@ -219,64 +339,95 @@
       </div>
     </section>
 
-    <section class="section media-section" aria-labelledby="media-title">
+    <section class="section section-tint media-section" aria-labelledby="media-title">
       <div class="site-shell media-layout">
-        <div>
+        <div class="reveal">
           <p class="eyebrow" data-i18n="media.eyebrow">Klinika haqida</p>
           <h2 id="media-title" data-i18n="media.title">Qabuldan oldin klinika bilan tanishing</h2>
           <p data-i18n="media.body">Qisqa video va ijtimoiy tarmoqlar orqali klinikadagi muhit, jamoa va yangiliklar bilan tanishishingiz mumkin.</p>
           <div class="social-links">
             <a href="https://www.instagram.com/madrimov_clinic" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-instagram" aria-hidden="true"></i>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.9.3-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.1.4-.3.8-.3 1.9-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.9.2.5.4.8.7 1.1.3.3.6.5 1.1.7.4.1.8.3 1.9.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.9-.3.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.1-.4.3-.8.3-1.9.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.9-.2-.5-.4-.8-.7-1.1-.3-.3-.6-.5-1.1-.7-.4-.1-.8-.3-1.9-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.1a5 5 0 1 1 0 9.9 5 5 0 0 1 0-9.9zm0 8.1a3.2 3.2 0 1 0 0-6.3 3.2 3.2 0 0 0 0 6.3zm6.4-8.3a1.2 1.2 0 1 1-2.3 0 1.2 1.2 0 0 1 2.3 0z"/></svg>
               Instagram
             </a>
             <a href="https://t.me/madrimov_clinic" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 3.3c.3-.9-.6-1.6-1.4-1.3L2.9 8.7c-.9.3-.9 1.6 0 1.9l4.4 1.5 1.7 5.3c.2.8 1.2 1 1.8.4l2.4-2.3 4.5 3.3c.7.5 1.6.1 1.8-.7zM8.5 11.6l8.7-5.4c.2-.1.4.2.2.3l-7.2 6.5c-.2.2-.4.5-.4.8l-.3 2.3c0 .3-.5.4-.6.1l-1-3.3c-.1-.4 0-.9.4-1.1z"/></svg>
               Telegram
             </a>
             <a href="https://www.youtube.com/@madrimov_clinic" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-youtube" aria-hidden="true"></i>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15.2V8.8L15.5 12z"/></svg>
               YouTube
             </a>
           </div>
         </div>
-        <video class="clinic-video" controls preload="metadata">
+        <video class="clinic-video reveal" controls preload="metadata">
           <source src="clinic_video.mp4" type="video/mp4">
         </video>
       </div>
     </section>
 
-    <section id="contact" class="section section-light contact-section" aria-labelledby="contact-title">
+    <section id="faq" class="section" aria-labelledby="faq-title">
+      <div class="site-shell faq-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="faq.eyebrow">Savol-javob</p>
+          <h2 id="faq-title" data-i18n="faq.title">Ko'p so'raladigan savollar</h2>
+          <p data-i18n="faq.intro">Javob topolmadingizmi? Telefon yoki Telegram orqali so'rang — tez javob beramiz.</p>
+        </div>
+        <div class="faq-list reveal">
+          <details>
+            <summary><span data-i18n="faq.q1">Qabulga oldindan yozilish kerakmi?</span><i></i></summary>
+            <p data-i18n="faq.a1">Navbatsiz kutmaslik uchun oldindan yozilishni tavsiya qilamiz — telefon yoki Telegram orqali bir daqiqada yozilasiz.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faq.q2">O'zim bilan nima olib kelay?</span><i></i></summary>
+            <p data-i18n="faq.a2">Avvalgi tekshiruv natijalari, xulosalar va qabul qilayotgan dorilaringiz ro'yxati bo'lsa — olib keling. Bu shifokorga to'liq manzarani ko'rishga yordam beradi.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faq.q3">UZI tekshiruviga tayyorgarlik kerakmi?</span><i></i></summary>
+            <p data-i18n="faq.a3">Tekshiruv turiga bog'liq: ba'zilariga och qoringa kelish talab qilinadi. Yozilayotganingizda aniq tavsiya beramiz.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faq.q4">Homiladorlikda UZI xavfsizmi?</span><i></i></summary>
+            <p data-i18n="faq.a4">UZI nurlanishsiz tekshiruv bo'lib, homiladorlik kuzatuvida keng qo'llaniladi. Tekshiruv shifokor tavsiyasi bo'yicha o'tkaziladi.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faq.q5">Klinika qachon ishlaydi?</span><i></i></summary>
+            <p data-i18n="faq.a5">Dushanbadan shanbagacha, 09:00 dan 17:00 gacha. Tushlik: 13:00 – 14:00. Yakshanba — dam olish kuni.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
       <div class="site-shell contact-layout">
-        <div class="contact-panel">
+        <div class="contact-panel reveal">
           <p class="eyebrow" data-i18n="contact.eyebrow">Aloqa</p>
           <h2 id="contact-title" data-i18n="contact.title">Qabul vaqtini kelishib oling</h2>
           <p data-i18n="contact.body">Qabulga yozilish yoki xizmatlar bo'yicha savollar uchun telefon, Telegram yoki Instagram orqali bog'laning.</p>
           <div class="contact-list">
             <a href="tel:+998905790450">
-              <i class="fas fa-phone" aria-hidden="true"></i>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.2c.6-.2 1.3.1 1.6.7l1.3 2.6c.3.5.2 1.2-.2 1.6l-1.2 1.2a13.4 13.4 0 0 0 6.6 6.6l1.2-1.2c.4-.4 1.1-.5 1.6-.2l2.6 1.3c.6.3.9 1 .7 1.6l-.7 2.1c-.2.7-.9 1.2-1.6 1.1C10.6 19.9 4.1 13.4 3.4 5.5c-.1-.7.4-1.4 1.1-1.6z"/></svg>
               <span>+998 90 579 04 50</span>
             </a>
-            <a href="mailto:madrimov.clinic@gmail.com">
-              <i class="fas fa-envelope" aria-hidden="true"></i>
-              <span>madrimov.clinic@gmail.com</span>
-            </a>
             <a href="https://t.me/madrimov_clinic" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 3.3c.3-.9-.6-1.6-1.4-1.3L2.9 8.7c-.9.3-.9 1.6 0 1.9l4.4 1.5 1.7 5.3c.2.8 1.2 1 1.8.4l2.4-2.3 4.5 3.3c.7.5 1.6.1 1.8-.7zM8.5 11.6l8.7-5.4c.2-.1.4.2.2.3l-7.2 6.5c-.2.2-.4.5-.4.8l-.3 2.3c0 .3-.5.4-.6.1l-1-3.3c-.1-.4 0-.9.4-1.1z"/></svg>
               <span>@madrimov_clinic</span>
             </a>
+            <a href="mailto:madrimov.clinic@gmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2.5 2.5 0 0 0-2.5 2.5v11A2.5 2.5 0 0 0 4 20h16a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 20 4zm-.4 4.3-6.9 4.6a1.3 1.3 0 0 1-1.4 0L4.4 8.3a.9.9 0 1 1 1-1.5L12 11.2l6.6-4.4a.9.9 0 0 1 1 1.5z"/></svg>
+              <span>madrimov.clinic@gmail.com</span>
+            </a>
             <p>
-              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7.5 7.5 0 0 0-7.5 7.5c0 5.1 6.4 11.6 6.7 11.9a1.1 1.1 0 0 0 1.6 0c.3-.3 6.7-6.8 6.7-11.9A7.5 7.5 0 0 0 12 2zm0 10.2a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4z"/></svg>
               <span data-i18n="contact.address">2-B, Sheroziy ko'chasi, Xonqa, Xorazm viloyati</span>
             </p>
           </div>
           <a class="button button-primary contact-cta" href="tel:+998905790450">
-            <i class="fas fa-calendar-check" aria-hidden="true"></i>
             <span data-i18n="cta.book">Qabulga yozilish</span>
           </a>
         </div>
 
-        <div class="map-card">
+        <div class="map-card reveal">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.774143697482!2d60.7743219!3d41.4771301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa2eff4c373157ba3%3A0x1601235c993013b9!2sMadrimov%20Clinic!5e0!3m2!1sen!2sus!4v1698765432109!5m2!1sen!2sus" title="Madrimov Clinic location" loading="lazy" allowfullscreen></iframe>
         </div>
       </div>
@@ -284,11 +435,50 @@
   </main>
 
   <footer class="site-footer">
-    <div class="site-shell footer-inner">
+    <div class="site-shell footer-grid">
+      <div>
+        <p class="footer-brand">Madrimov <em>Clinic</em></p>
+        <p data-i18n="footer.note">Xonqa shahrida UZI diagnostika, fizioterapiya va shifokor maslahati.</p>
+      </div>
+      <div>
+        <h3 data-i18n="footer.contact">Aloqa</h3>
+        <p><a href="tel:+998905790450">+998 90 579 04 50</a></p>
+        <p><a href="https://t.me/madrimov_clinic" target="_blank" rel="noopener noreferrer">@madrimov_clinic</a></p>
+        <p data-i18n="contact.address">2-B, Sheroziy ko'chasi, Xonqa, Xorazm viloyati</p>
+      </div>
+      <div>
+        <h3 data-i18n="footer.hours">Ish vaqti</h3>
+        <p data-i18n="footer.hours.weekdays">Dush–Shan: 09:00 – 17:00</p>
+        <p data-i18n="footer.hours.lunch">Tushlik: 13:00 – 14:00</p>
+        <p data-i18n="footer.hours.sunday">Yakshanba: dam olish kuni</p>
+      </div>
+    </div>
+    <div class="site-shell footer-bottom">
       <p>&copy; <span data-year></span> Madrimov Clinic</p>
-      <p data-i18n="footer.note">Xonqa shahrida UZI diagnostika va fizioterapiya xizmatlari.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/madrimov_clinic" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.9.3-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.1.4-.3.8-.3 1.9-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.9.2.5.4.8.7 1.1.3.3.6.5 1.1.7.4.1.8.3 1.9.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.9-.3.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.1-.4.3-.8.3-1.9.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.9-.2-.5-.4-.8-.7-1.1-.3-.3-.6-.5-1.1-.7-.4-.1-.8-.3-1.9-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.1a5 5 0 1 1 0 9.9 5 5 0 0 1 0-9.9zm0 8.1a3.2 3.2 0 1 0 0-6.3 3.2 3.2 0 0 0 0 6.3zm6.4-8.3a1.2 1.2 0 1 1-2.3 0 1.2 1.2 0 0 1 2.3 0z"/></svg>
+        </a>
+        <a href="https://t.me/madrimov_clinic" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 3.3c.3-.9-.6-1.6-1.4-1.3L2.9 8.7c-.9.3-.9 1.6 0 1.9l4.4 1.5 1.7 5.3c.2.8 1.2 1 1.8.4l2.4-2.3 4.5 3.3c.7.5 1.6.1 1.8-.7zM8.5 11.6l8.7-5.4c.2-.1.4.2.2.3l-7.2 6.5c-.2.2-.4.5-.4.8l-.3 2.3c0 .3-.5.4-.6.1l-1-3.3c-.1-.4 0-.9.4-1.1z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@madrimov_clinic" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15.2V8.8L15.5 12z"/></svg>
+        </a>
+      </div>
     </div>
   </footer>
+
+  <div class="mobile-bar" aria-label="Quick contact">
+    <a class="mobile-bar-call" href="tel:+998905790450">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.2c.6-.2 1.3.1 1.6.7l1.3 2.6c.3.5.2 1.2-.2 1.6l-1.2 1.2a13.4 13.4 0 0 0 6.6 6.6l1.2-1.2c.4-.4 1.1-.5 1.6-.2l2.6 1.3c.6.3.9 1 .7 1.6l-.7 2.1c-.2.7-.9 1.2-1.6 1.1C10.6 19.9 4.1 13.4 3.4 5.5c-.1-.7.4-1.4 1.1-1.6z"/></svg>
+      <span data-i18n="bar.call">Qo'ng'iroq</span>
+    </a>
+    <a class="mobile-bar-telegram" href="https://t.me/madrimov_clinic" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 3.3c.3-.9-.6-1.6-1.4-1.3L2.9 8.7c-.9.3-.9 1.6 0 1.9l4.4 1.5 1.7 5.3c.2.8 1.2 1 1.8.4l2.4-2.3 4.5 3.3c.7.5 1.6.1 1.8-.7zM8.5 11.6l8.7-5.4c.2-.1.4.2.2.3l-7.2 6.5c-.2.2-.4.5-.4.8l-.3 2.3c0 .3-.5.4-.6.1l-1-3.3c-.1-.4 0-.9.4-1.1z"/></svg>
+      <span>Telegram</span>
+    </a>
+  </div>
 
   <script src="assets/js/site.js"></script>
 </body>
