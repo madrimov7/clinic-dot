@@ -254,6 +254,32 @@ h2 {
   height: 15px;
 }
 
+.header-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink-900);
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.header-social:hover,
+.header-social:focus-visible {
+  color: var(--blue-600);
+  border-color: rgba(43, 108, 217, 0.42);
+  transform: translateY(-1px);
+}
+
+.header-social svg {
+  width: 18px;
+  height: 18px;
+}
+
 .nav-toggle {
   display: none;
   width: 42px;
@@ -318,6 +344,10 @@ h2 {
   width: 100%;
 }
 
+.mobile-nav .button + .button {
+  margin-top: 10px;
+}
+
 /* ---------- Buttons ---------- */
 
 .button {
@@ -360,6 +390,18 @@ h2 {
 .button-telegram:hover,
 .button-telegram:focus-visible {
   background: var(--ink-900);
+}
+
+.button-outline {
+  background: #fff;
+  color: var(--ink-900);
+  border-color: var(--line);
+}
+
+.button-outline:hover,
+.button-outline:focus-visible {
+  color: var(--blue-600);
+  border-color: rgba(43, 108, 217, 0.42);
 }
 
 /* ---------- Hero ---------- */
@@ -1457,6 +1499,10 @@ h2 {
     width: 42px;
     padding: 0;
     justify-content: center;
+  }
+
+  .header-social {
+    display: none;
   }
 
   .brand img {
