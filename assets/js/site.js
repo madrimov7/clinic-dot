@@ -315,21 +315,11 @@ const translations = {
 
 const supportedLanguages = Object.keys(translations);
 const fallbackLanguage = "uz";
-const languageStorageKey = "mc-lang";
 
 function getInitialLanguage() {
   const urlLanguage = new URLSearchParams(window.location.search).get("lang");
   if (supportedLanguages.includes(urlLanguage)) {
     return urlLanguage;
-  }
-
-  try {
-    const storedLanguage = localStorage.getItem(languageStorageKey);
-    if (supportedLanguages.includes(storedLanguage)) {
-      return storedLanguage;
-    }
-  } catch (error) {
-    /* storage unavailable */
   }
 
   return fallbackLanguage;
@@ -358,12 +348,6 @@ function setLanguage(language) {
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-pressed", String(isActive));
   });
-
-  try {
-    localStorage.setItem(languageStorageKey, language);
-  } catch (error) {
-    /* storage unavailable */
-  }
 }
 
 document.querySelectorAll("[data-lang-button]").forEach((button) => {
